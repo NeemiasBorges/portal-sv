@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\ifspn\\OneDrive\\Desktop\\APPS\\backend-portal-sv\\backend-portal-sv\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CDD7368C-5C53-4A03-817E-02BE3E1674A2}|Services\\Services.csproj|c:\\users\\ifspn\\onedrive\\desktop\\apps\\backend-portal-sv\\backend-portal-sv\\services\\services\\cliente\\clienteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDD7368C-5C53-4A03-817E-02BE3E1674A2}|Services\\Services.csproj|solutionrelative:services\\services\\cliente\\clienteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CDD7368C-5C53-4A03-817E-02BE3E1674A2}|Services\\Services.csproj|c:\\users\\ifspn\\onedrive\\desktop\\apps\\backend-portal-sv\\backend-portal-sv\\services\\services\\dto\\cliente\\clientedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CDD7368C-5C53-4A03-817E-02BE3E1674A2}|Services\\Services.csproj|solutionrelative:services\\services\\dto\\cliente\\clientedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{280534B9-F53C-4B3E-A2F0-74CD52B84C93}|Domain\\Domain.csproj|c:\\users\\ifspn\\onedrive\\desktop\\apps\\backend-portal-sv\\backend-portal-sv\\domain\\entity\\cliente\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{280534B9-F53C-4B3E-A2F0-74CD52B84C93}|Domain\\Domain.csproj|solutionrelative:domain\\entity\\cliente\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "ClienteDTO.cs",
               "DocumentMoniker": "C:\\Users\\ifspn\\OneDrive\\Desktop\\APPS\\backend-portal-sv\\backend-portal-sv\\Services\\Services\\DTO\\Cliente\\ClienteDTO.cs",
               "RelativeDocumentMoniker": "Services\\Services\\DTO\\Cliente\\ClienteDTO.cs",
               "ToolTip": "C:\\Users\\ifspn\\OneDrive\\Desktop\\APPS\\backend-portal-sv\\backend-portal-sv\\Services\\Services\\DTO\\Cliente\\ClienteDTO.cs",
               "RelativeToolTip": "Services\\Services\\DTO\\Cliente\\ClienteDTO.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAD4v0AAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAYwEIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-02T22:32:12.426Z",
+              "WhenOpened": "2025-01-02T22:30:03.443Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ClienteService.cs",
-              "DocumentMoniker": "C:\\Users\\ifspn\\OneDrive\\Desktop\\APPS\\backend-portal-sv\\backend-portal-sv\\Services\\Services\\Cliente\\ClienteService.cs",
-              "RelativeDocumentMoniker": "Services\\Services\\Cliente\\ClienteService.cs",
-              "ToolTip": "C:\\Users\\ifspn\\OneDrive\\Desktop\\APPS\\backend-portal-sv\\backend-portal-sv\\Services\\Services\\Cliente\\ClienteService.cs",
-              "RelativeToolTip": "Services\\Services\\Cliente\\ClienteService.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAUwFMAAAAnAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Cliente.cs",
+              "DocumentMoniker": "C:\\Users\\ifspn\\OneDrive\\Desktop\\APPS\\backend-portal-sv\\backend-portal-sv\\Domain\\Entity\\Cliente\\Cliente.cs",
+              "RelativeDocumentMoniker": "Domain\\Entity\\Cliente\\Cliente.cs",
+              "ToolTip": "C:\\Users\\ifspn\\OneDrive\\Desktop\\APPS\\backend-portal-sv\\backend-portal-sv\\Domain\\Entity\\Cliente\\Cliente.cs",
+              "RelativeToolTip": "Domain\\Entity\\Cliente\\Cliente.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAywBYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-02T22:31:55.806Z",
+              "WhenOpened": "2025-01-02T22:28:41.447Z",
               "EditorCaption": ""
             }
           ]
