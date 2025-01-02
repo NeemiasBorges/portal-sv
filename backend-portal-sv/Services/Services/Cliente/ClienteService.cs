@@ -20,8 +20,8 @@ namespace Services.Services.Cliente
         {
             try
             {
-                await _clienteRepository.Add(cliente.toEntity());
-                _logs.Information("Cliente: '{cliente}' - adicionado com sucesso", cliente.nome);
+                await _clienteRepository.Add(cliente.ToEntity());
+                _logs.Information("Cliente: '{cliente}' - adicionado com sucesso", cliente.Nome);
             }
             catch (Exception e)
             {
@@ -34,8 +34,8 @@ namespace Services.Services.Cliente
         {
             try
             {
-                await _clienteRepository.Delete(cliente.toEntity());
-                _logs.Information("Cliente: '{cliente}' - deletado com sucesso", cliente.nome);
+                await _clienteRepository.Delete(cliente.ToEntity());
+                _logs.Information("Cliente: '{cliente}' - deletado com sucesso", cliente.Nome);
             }
             catch (Exception e)
             {
@@ -76,8 +76,8 @@ namespace Services.Services.Cliente
         {
             try
             {
-                await _clienteRepository.Update(cliente.toEntity());
-                _logs.Information("Cliente: '{cliente}' - atualizado com sucesso", cliente.nome);
+                await _clienteRepository.Update(cliente.ToEntity());
+                _logs.Information("Cliente: '{cliente}' - atualizado com sucesso", cliente.Nome);
             }
             catch (Exception e)
             {

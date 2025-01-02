@@ -44,7 +44,7 @@ builder.Services.AddSwaggerGen(c =>
     {
         Title = "SV API",
         Version = "v1",
-        Description = "API para gerenciamento de SV"
+        Description = "API para gerenciamento de Seguros de Vendas"
     });
 
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme

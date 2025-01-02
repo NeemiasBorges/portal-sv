@@ -5,7 +5,6 @@ C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend
 C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\obj\Debug\net8.0\backend-portal-sv.csproj.CoreCompileInputs.cache
 C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\obj\Debug\net8.0\backend-portal-sv.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\obj\Debug\net8.0\backend-portal-sv.sourcelink.json
-C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\obj\Debug\net8.0\backend-portal-sv.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\bin\Debug\net8.0\appsettings.json
 C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\bin\Debug\net8.0\backend-portal-sv.staticwebassets.endpoints.json
@@ -84,6 +83,7 @@ C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend
 C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\bin\Debug\net8.0\Infra.pdb
 C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\bin\Debug\net8.0\Services.pdb
 C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\bin\Debug\net8.0\Domain.pdb
+C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\obj\Debug\net8.0\backend-portal-sv.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\obj\Debug\net8.0\scopedcss\bundle\backend-portal-sv.styles.css
 C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\obj\Debug\net8.0\staticwebassets.development.json

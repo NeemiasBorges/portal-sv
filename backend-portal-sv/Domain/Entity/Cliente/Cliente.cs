@@ -8,20 +8,29 @@ namespace Domain.Entity
     public class Cliente
     {
         public Cliente() { }
-
         [Key]
         public int Id { get; private set; }
         public string nome { get; private set; }
-        public int id_endereco { get; private set; }
-        public int id_telefone { get; private set; }
+        [EmailAddress]
         public string email { get; private set; }
-        public Cliente(int id, string nome, int id_endereco, int id_telefone, string email)
+        public string cpf { get; private set; }
+        public string telefone { get; private set; }
+
+        [AllowedValues("M", "F")]
+        public string sexo { get; private set; }
+        public string cep { get; private set; }
+        public DateTime datacriacao { get; private set; }
+
+        public Cliente(int id, string nome, string email, string cpf, string telefone, string sexo, string cep, DateTime datacriacao)
         {
             Id = id;
             this.nome = nome ?? throw new ArgumentNullException(nameof(nome));
-            this.id_endereco = id_endereco;
-            this.id_telefone = id_telefone;
             this.email = email ?? throw new ArgumentNullException(nameof(email));
+            this.cpf = cpf ?? throw new ArgumentNullException(nameof(cpf));
+            this.telefone = telefone ?? throw new ArgumentNullException(nameof(telefone));
+            this.sexo = sexo ?? throw new ArgumentNullException(nameof(sexo));
+            this.cep = cep ?? throw new ArgumentNullException(nameof(cep));
+            this.datacriacao = datacriacao;
         }
     }
 }
