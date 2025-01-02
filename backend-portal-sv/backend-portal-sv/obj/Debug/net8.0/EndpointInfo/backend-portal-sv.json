@@ -1,9 +1,16 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "SV API",
-    "description": "API para gerenciamento de Seguros de Vendas",
-    "version": "v1"
+    "title": "API de Seguro de Viagens",
+    "description": "API destinada ao portal de seguros de viagens, oferecendo integração com diversos serviços relacionados a seguros para viagens nacionais/internacionais.",
+    "contact": {
+      "name": "APISV",
+      "email": "neemiasb.dev@gmail.com"
+    },
+    "license": {
+      "name": "Licenca -> Teste Técnico - API"
+    },
+    "version": "1.0"
   },
   "paths": {
     "/api/v1/auth": {
@@ -28,6 +35,16 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "api-version",
+            "in": "query",
+            "description": "The requested API version",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "1.0"
+            }
           }
         ],
         "responses": {
@@ -47,7 +64,7 @@
         }
       }
     },
-    "/api/v1/chatbot": {
+    "/api/v1/Chatbot": {
       "post": {
         "tags": [
           "ChatBot"
@@ -82,7 +99,7 @@
         }
       }
     },
-    "/api/v1/clientes": {
+    "/api/v1/chatbot": {
       "get": {
         "tags": [
           "Clientes"
@@ -180,7 +197,7 @@
         }
       }
     },
-    "/api/v1/clientes/{id}": {
+    "/api/v1/chatbot/{id}": {
       "get": {
         "tags": [
           "Clientes"

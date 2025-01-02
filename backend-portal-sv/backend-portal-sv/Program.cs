@@ -1,8 +1,9 @@
+using Asp.Versioning.ApiExplorer;
+using backend_portal_sv.SwaggerConfig;
 using Infra.Conection;
 using Infra.Repository;
 using Infra.Repository.Interfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Serilog;
@@ -17,44 +18,54 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
-
+// Configuração dos Controllers
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
 
+// Configuração Swagger/OpenAPI
+builder.Services.AddEndpointsApiExplorer();
+// Configuração do contexto de banco de dados
 builder.Services.AddDbContext<ConnectionContext>();
-#region repositorios
+
+#region Repositorios
 builder.Services.AddScoped<IClienteRepository, ClienteRepository>();
 builder.Services.AddScoped<IChatbotRepository, ChatbotRepository>();
 #endregion
 
-#region services
+#region Services
 builder.Services.AddScoped<IClienteService, ClienteService>();
 builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddScoped<IChatbotService, ChatbotService>();
-
 #endregion
 
+// Configuração do logger
 builder.Services.AddSingleton<Serilog.ILogger>(new LoggerConfiguration()
     .CreateLogger());
 
-builder.Services.AddApiVersioning(o =>
+#region CORS
+builder.Services.AddCors(option =>
 {
-    o.ReportApiVersions = true;
-    o.AssumeDefaultVersionWhenUnspecified = true;
-    o.DefaultApiVersion = new ApiVersion(1, 0);
+    option.AddPolicy("CorsPolicy", builder =>
+    {
+        builder.AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader();
+    });
 });
+#endregion
 
+#region API Versioning
+builder.Services.AddApiVersioning().AddMvc().AddApiExplorer(setup =>
+{
+    setup.GroupNameFormat = "'v'VVV";
+    setup.SubstituteApiVersionInUrl = true;
+});
+builder.Services.ConfigureOptions<ConfigureSwaggerGenOptions>();
+#endregion
+
+#region Swagger Configuration
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new OpenApiInfo
-    {
-        Title = "SV API",
-        Version = "v1",
-        Description = "API para gerenciamento de Seguros de Vendas"
-    });
-
+    c.OperationFilter<SwaggerDefaultValues>();
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         Name = "Authorization",
@@ -84,15 +95,18 @@ builder.Services.AddSwaggerGen(c =>
     var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
     var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
     c.IncludeXmlComments(xmlPath);
-
 });
+#endregion
 
+#region HTTP Response Configuration
 builder.Services.Configure<HttpResponse>(options =>
 {
     options.Headers.Add("Content-Type", "application/json; charset=utf-8");
 });
+#endregion
 
-builder.Services.AddAuthentication( x=>
+#region Authentication
+builder.Services.AddAuthentication(x =>
 {
     x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
     x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -108,24 +122,35 @@ builder.Services.AddAuthentication( x=>
         ValidateAudience = false
     };
 });
+#endregion
 
 var app = builder.Build();
 
+#region Middleware Configuration
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/error-dev");
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(options =>
+    {
+        var version = app.Services.GetRequiredService<IApiVersionDescriptionProvider>();
+        foreach (var item in version.ApiVersionDescriptions)
+        {
+            options.SwaggerEndpoint($"/swagger/{item.GroupName}/swagger.json", $"Versão API - {item.GroupName.ToUpper()}");
+        }
+    });
 }
 else
 {
     app.UseExceptionHandler("/error");
 }
 
+app.UseCors("CorsPolicy");
 app.UseHttpsRedirection();
 app.UseStatusCodePages();
 app.UseAuthorization();
 app.MapControllers();
+#endregion
 
 app.Run();
