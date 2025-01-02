@@ -36,7 +36,3 @@ Um sistema desenvolvido em **C#** para gerenciar o cadastro de clientes, consult
 
 ## Licença  
 Este projeto está licenciado sob a [Licença MIT](LICENSE).  
-
----
-
-Se precisar personalizar algo, só avisar! 😊
