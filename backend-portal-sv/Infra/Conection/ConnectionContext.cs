@@ -1,4 +1,4 @@
-﻿using Domain.Entity.Cliente;
+﻿using Domain.Entity;
 using Microsoft.EntityFrameworkCore;
 
 namespace Infra.Conection
@@ -9,7 +9,7 @@ namespace Infra.Conection
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             //optionsBuilder.UseSqlServer("Server=localhost;Database=Teste;User Id=sa;Password=123456;");
-            optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=Teste;Username=postgresql;Password=postgresql");
+            optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=teste_tecnico;Username=postgres;Password=postgres");
         }
     }
 }

@@ -1,0 +1,26 @@
+[
+  {
+    "ContainingType": "ClienteController",
+    "Method": "Cliente",
+    "RelativePath": "api/v1/cliente",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      },
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 500
+      }
+    ],
+    "Tags": [
+      "Clientes"
+    ]
+  }
+]

@@ -2,13 +2,17 @@
 using Infra.Conection;
 using Infra.Repository.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using System.Xml.Linq;
+using Microsoft.EntityFrameworkCore.Query.Internal;
 
 namespace Infra.Repository
 {
     public class ClienteRepository : IClienteRepository
     {
-        private readonly ConnectionContext _context = new ConnectionContext();
+        private readonly ConnectionContext _context;
+        public ClienteRepository(ConnectionContext context)
+        {
+            _context = context;
+        }
         public async Task Add(Cliente cliente)
         {
             try

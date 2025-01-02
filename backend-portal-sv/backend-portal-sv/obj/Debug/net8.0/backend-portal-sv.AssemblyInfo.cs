@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("backend-portal-sv")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c4f13ceb9ab3e869c26b8223ad64d266f92ca978")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+023d879289d6cd767ece5f6623ec40d62b7f62df")]
 [assembly: System.Reflection.AssemblyProductAttribute("backend-portal-sv")]
 [assembly: System.Reflection.AssemblyTitleAttribute("backend-portal-sv")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,0 +1,27 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "SV API",
+    "description": "API para gerenciamento de SV",
+    "version": "v1"
+  },
+  "paths": {
+    "/api/v1/cliente": {
+      "get": {
+        "tags": [
+          "Clientes"
+        ],
+        "summary": "Retorna todos os clientes cadastrados",
+        "responses": {
+          "200": {
+            "description": "Lista de clientes retornada com sucesso"
+          },
+          "500": {
+            "description": "Erro interno do servidor"
+          }
+        }
+      }
+    }
+  },
+  "components": { }
+}

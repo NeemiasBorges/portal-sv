@@ -1,28 +1,36 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Services.Services.Cliente.Interfaces;
 
-namespace backend_portal_sv.Controllers
+[ApiController]
+[Route("api/v1/cliente")]
+[Produces("application/json")]
+[Tags("Clientes")]
+public class ClienteController : ControllerBase
 {
-    [Route("api/v1/cliente")]
-    public class ClienteController : ControllerBase
-    {
-        private readonly IClienteService _clienteService;
-        public ClienteController(IClienteService clienteService)
-        {
-            _clienteService = clienteService;
-        }
+    private readonly IClienteService _clienteService;
 
-        [HttpGet]
-        public async Task<IActionResult> Cliente()
+    public ClienteController(IClienteService clienteService)
+    {
+        _clienteService = clienteService;
+    }
+
+    /// <summary>
+    /// Retorna todos os clientes cadastrados
+    /// </summary>
+    /// <response code="200">Lista de clientes retornada com sucesso</response>
+    /// <response code="500">Erro interno do servidor</response>
+    [HttpGet]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+    public async Task<IActionResult> Cliente()
+    {
+        try
         {
-            try
-            {
-                return Ok(await _clienteService.GetAll());
-            }
-            catch (Exception e)
-            {
-                return StatusCode(500, e.Message);
-            }
+            return Ok(await _clienteService.GetAll());
+        }
+        catch (Exception e)
+        {
+            return StatusCode(500, e.Message);
         }
     }
 }

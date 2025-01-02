@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>backend-portal-sv</name>
+    </assembly>
+    <members>
+        <member name="M:ClienteController.Cliente">
+            <summary>
+            Retorna todos os clientes cadastrados
+            </summary>
+            <response code="200">Lista de clientes retornada com sucesso</response>
+            <response code="500">Erro interno do servidor</response>
+        </member>
+    </members>
+</doc>

@@ -12,7 +12,7 @@ namespace Services.Services.Cliente
         private readonly ILogger _logs;
 
         public ClienteService(
-            ClienteRepository clienteRepository,
+            IClienteRepository clienteRepository,
             ILogger logger)
         {
             _logs = logger;
