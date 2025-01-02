@@ -4,12 +4,76 @@
         <name>backend-portal-sv</name>
     </assembly>
     <members>
-        <member name="M:ClienteController.Cliente">
+        <member name="T:backend_portal_sv.Controllers.AuthController">
             <summary>
-            Retorna todos os clientes cadastrados
+            Controlador responsável pela autenticação de usuários.
             </summary>
-            <response code="200">Lista de clientes retornada com sucesso</response>
-            <response code="500">Erro interno do servidor</response>
+        </member>
+        <member name="M:backend_portal_sv.Controllers.AuthController.#ctor(Services.Services.Interfaces.ITokenService)">
+            <summary>
+            Inicializa o AuthController com o serviço de token.
+            </summary>
+            <param name="tokenService">Serviço responsável pela geração de tokens JWT.</param>
+        </member>
+        <member name="M:backend_portal_sv.Controllers.AuthController.Auth(System.String,System.String)">
+            <summary>
+            Realiza a autenticação de um usuário e retorna um token JWT caso as credenciais sejam válidas.
+            </summary>
+            <param name="username">Nome de usuário.</param>
+            <param name="password">Senha do usuário.</param>
+            <returns>Token JWT em caso de sucesso ou mensagem de erro em caso de falha.</returns>
+            <response code="200">Retorna o token JWT gerado com sucesso.</response>
+            <response code="400">Usuário ou senha inválidos.</response>
+        </member>
+        <member name="M:ClienteController.#ctor(Services.Services.Cliente.Interfaces.IClienteService)">
+            <summary>
+            Inicializa o ClienteController com o serviço de cliente.
+            </summary>
+            <param name="clienteService">Serviço responsável pelas operações relacionadas aos clientes.</param>
+        </member>
+        <member name="M:ClienteController.GetAllClientes(System.Int32,System.Int32)">
+            <summary>
+            Retorna todos os clientes cadastrados. 
+            Este endpoint requer autenticação.
+            </summary>
+            <returns>Lista de clientes cadastrados.</returns>
+            <response code="200">Lista de clientes retornada com sucesso.</response>
+            <response code="401">Usuário não autenticado.</response>
+            <response code="500">Erro interno do servidor.</response>
+        </member>
+        <member name="M:ClienteController.GetClienteById(System.Int32)">
+            <summary>
+            Retorna um cliente específico pelo ID. 
+            Este endpoint requer autenticação.
+            </summary>
+            <param name="id">ID do cliente.</param>
+            <returns>Dados do cliente correspondente ao ID informado.</returns>
+            <response code="200">Cliente encontrado com sucesso.</response>
+            <response code="401">Usuário não autenticado.</response>
+            <response code="404">Cliente não encontrado.</response>
+            <response code="500">Erro interno do servidor.</response>
+        </member>
+        <member name="M:ClienteController.UpdateCliente(Services.Services.DTO.Cliente.ClienteDTO)">
+            <summary>
+            Atualiza os dados de um cliente existente. 
+            Este endpoint requer autenticação.
+            </summary>
+            <param name="cliente">Objeto contendo os dados do cliente a serem atualizados.</param>
+            <response code="200">Cliente atualizado com sucesso.</response>
+            <response code="401">Usuário não autenticado.</response>
+            <response code="404">Cliente não encontrado.</response>
+            <response code="500">Erro interno do servidor.</response>
+        </member>
+        <member name="M:ClienteController.DeleteCliente(System.Int32)">
+            <summary>
+            Deleta um cliente específico pelo ID. 
+            Este endpoint requer autenticação.
+            </summary>
+            <param name="id">ID do cliente a ser deletado.</param>
+            <response code="200">Cliente deletado com sucesso.</response>
+            <response code="401">Usuário não autenticado.</response>
+            <response code="404">Cliente não encontrado.</response>
+            <response code="500">Erro interno do servidor.</response>
         </member>
     </members>
 </doc>

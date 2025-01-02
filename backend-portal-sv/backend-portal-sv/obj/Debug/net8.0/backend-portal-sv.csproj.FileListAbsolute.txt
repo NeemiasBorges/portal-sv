@@ -59,3 +59,11 @@ C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend
 C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\obj\Debug\net8.0\ref\backend-portal-sv.dll
 C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\bin\Debug\net8.0\backend-portal-sv.xml
 C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\obj\Debug\net8.0\backend-portal-sv.xml
+C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll

@@ -10,19 +10,18 @@ namespace Services.Services.Cliente
     {
         private readonly IClienteRepository _clienteRepository;
         private readonly ILogger _logs;
-
-        public ClienteService(
-            IClienteRepository clienteRepository,
-            ILogger logger)
+        public ClienteService(IClienteRepository clienteRepository, ILogger logs)
         {
-            _logs = logger;
-            _clienteRepository = clienteRepository;
+            _clienteRepository = clienteRepository ?? throw new ArgumentNullException(nameof(clienteRepository));
+            _logs = logs ?? throw new ArgumentNullException(nameof(logs));
         }
+
         public async Task Add(ClienteDTO cliente)
         {
             try
             {
                 await _clienteRepository.Add(cliente.toEntity());
+                _logs.Information("Cliente: '{cliente}' - adicionado com sucesso", cliente.nome);
             }
             catch (Exception e)
             {
@@ -35,7 +34,8 @@ namespace Services.Services.Cliente
         {
             try
             {
-                await _clienteRepository.Delete(cliente.toEntity());  
+                await _clienteRepository.Delete(cliente.toEntity());
+                _logs.Information("Cliente: '{cliente}' - deletado com sucesso", cliente.nome);
             }
             catch (Exception e)
             {
@@ -58,11 +58,11 @@ namespace Services.Services.Cliente
             }
         }
 
-        public async Task<List<ClienteDTO>> GetAll()
+        public async Task<List<ClienteDTO>> GetAll(int numero_pagina, int quantidade_p_pagina)
         {
             try
             {
-                var listaClientes = await _clienteRepository.GetAll();
+                var listaClientes = await _clienteRepository.GetAll(numero_pagina, quantidade_p_pagina);
                 return listaClientes.Select(cliente => new ClienteDTO(cliente)).ToList();
             }
             catch (Exception e)
@@ -77,6 +77,7 @@ namespace Services.Services.Cliente
             try
             {
                 await _clienteRepository.Update(cliente.toEntity());
+                _logs.Information("Cliente: '{cliente}' - atualizado com sucesso", cliente.nome);
             }
             catch (Exception e)
             {
