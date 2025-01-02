@@ -2,6 +2,7 @@ using Infra.Conection;
 using Infra.Repository;
 using Infra.Repository.Interfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Serilog;
@@ -37,6 +38,13 @@ builder.Services.AddScoped<IChatbotService, ChatbotService>();
 
 builder.Services.AddSingleton<Serilog.ILogger>(new LoggerConfiguration()
     .CreateLogger());
+
+builder.Services.AddApiVersioning(o =>
+{
+    o.ReportApiVersions = true;
+    o.AssumeDefaultVersionWhenUnspecified = true;
+    o.DefaultApiVersion = new ApiVersion(1, 0);
+});
 
 builder.Services.AddSwaggerGen(c =>
 {

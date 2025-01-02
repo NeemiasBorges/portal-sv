@@ -25,7 +25,7 @@
             <response code="200">Retorna o token JWT gerado com sucesso.</response>
             <response code="400">Usuário ou senha inválidos.</response>
         </member>
-        <member name="M:backend_portal_sv.Controllers.ChatbotController.SendMessage(System.String)">
+        <member name="M:backend_portal_sv.Controllers.v1.ChatbotController.SendMessage(System.String)">
             <summary>
             Se comunica com o LLM e esperaa resposta da API
             </summary>

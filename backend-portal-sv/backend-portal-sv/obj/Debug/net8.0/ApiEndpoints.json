@@ -37,7 +37,7 @@
     ]
   },
   {
-    "ContainingType": "backend_portal_sv.Controllers.ChatbotController",
+    "ContainingType": "backend_portal_sv.Controllers.v1.ChatbotController",
     "Method": "SendMessage",
     "RelativePath": "api/v1/chatbot",
     "HttpMethod": "POST",
