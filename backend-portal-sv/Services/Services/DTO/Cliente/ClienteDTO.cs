@@ -4,6 +4,10 @@ namespace Services.Services.DTO.Cliente
 {
     public class ClienteDTO
     {
+        public ClienteDTO()
+        {
+        }
+
         public ClienteDTO(Domain.Entity.Cliente cliente)
         {
             this.Id = cliente.Id;
