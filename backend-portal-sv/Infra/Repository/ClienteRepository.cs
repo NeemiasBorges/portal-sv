@@ -51,11 +51,11 @@ namespace Infra.Repository
             }
         }
 
-        public async Task<List<Cliente>> GetAll()
+        public async Task<List<Cliente>> GetAll(int numero_pagina, int quantidade_p_pagina)
         {
             try
             {
-                var listaClientes = await _context.Clientes.ToListAsync();
+                var listaClientes = await _context.Clientes.Skip(numero_pagina * quantidade_p_pagina).Take(quantidade_p_pagina).ToListAsync();
                 return listaClientes;
             }
             catch (Exception e)
