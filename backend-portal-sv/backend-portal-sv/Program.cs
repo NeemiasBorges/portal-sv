@@ -6,6 +6,8 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Serilog;
 using Services.Services;
+using Services.Services.Chatbot;
+using Services.Services.Chatbot.Interface;
 using Services.Services.Cliente;
 using Services.Services.Cliente.Interfaces;
 using Services.Services.Interfaces;
@@ -14,7 +16,6 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -24,11 +25,14 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<ConnectionContext>();
 #region repositorios
 builder.Services.AddScoped<IClienteRepository, ClienteRepository>();
+builder.Services.AddScoped<IChatbotRepository, ChatbotRepository>();
 #endregion
 
 #region services
 builder.Services.AddScoped<IClienteService, ClienteService>();
 builder.Services.AddScoped<ITokenService, TokenService>();
+builder.Services.AddScoped<IChatbotService, ChatbotService>();
+
 #endregion
 
 builder.Services.AddSingleton<Serilog.ILogger>(new LoggerConfiguration()

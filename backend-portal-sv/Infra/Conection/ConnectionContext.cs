@@ -1,5 +1,6 @@
 ﻿using Domain.Entity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace Infra.Conection
 {
@@ -8,8 +9,10 @@ namespace Infra.Conection
         public DbSet<Cliente> Clientes { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //optionsBuilder.UseSqlServer("Server=localhost;Database=Teste;User Id=sa;Password=123456;");
-            optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=teste_tecnico;Username=postgres;Password=@Cesso2024");
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlServer("Data Source=DEVNEMO;Initial Catalog=PORTALSV;User ID=protheus2024;Password=123456;Encrypt=False");
+            }
         }
     }
 }

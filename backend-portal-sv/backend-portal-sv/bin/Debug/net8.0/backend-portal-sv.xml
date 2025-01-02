@@ -25,6 +25,15 @@
             <response code="200">Retorna o token JWT gerado com sucesso.</response>
             <response code="400">Usuário ou senha inválidos.</response>
         </member>
+        <member name="M:backend_portal_sv.Controllers.ChatbotController.SendMessage(System.String)">
+            <summary>
+            Se comunica com o LLM e esperaa resposta da API
+            </summary>
+            <returns>String de retorno da api LLM.</returns>
+            <response code="200">Retorna resposta do LLM com sucesso.</response>
+            <response code="401">Usuário não autenticado.</response>
+            <response code="500">Erro interno do servidor.</response>
+        </member>
         <member name="M:ClienteController.#ctor(Services.Services.Cliente.Interfaces.IClienteService)">
             <summary>
             Inicializa o ClienteController com o serviço de cliente.

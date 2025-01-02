@@ -47,6 +47,41 @@
         }
       }
     },
+    "/api/v1/chatbot": {
+      "post": {
+        "tags": [
+          "ChatBot"
+        ],
+        "summary": "Se comunica com o LLM e esperaa resposta da API",
+        "parameters": [
+          {
+            "name": "message",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Retorna resposta do LLM com sucesso."
+          },
+          "401": {
+            "description": "Usuário não autenticado.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erro interno do servidor."
+          }
+        }
+      }
+    },
     "/api/v1/clientes": {
       "get": {
         "tags": [

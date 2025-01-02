@@ -37,6 +37,43 @@
     ]
   },
   {
+    "ContainingType": "backend_portal_sv.Controllers.ChatbotController",
+    "Method": "SendMessage",
+    "RelativePath": "api/v1/chatbot",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "message",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 401
+      },
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 500
+      }
+    ],
+    "Tags": [
+      "ChatBot"
+    ]
+  },
+  {
     "ContainingType": "ClienteController",
     "Method": "GetAllClientes",
     "RelativePath": "api/v1/clientes",

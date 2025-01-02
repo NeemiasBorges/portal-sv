@@ -2,7 +2,6 @@
 using Infra.Conection;
 using Infra.Repository.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Query.Internal;
 
 namespace Infra.Repository
 {
