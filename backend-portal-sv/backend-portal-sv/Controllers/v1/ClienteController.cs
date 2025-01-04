@@ -5,11 +5,11 @@ using Services.Services.Cliente.Interfaces;
 using Services.Services.DTO.Cliente;
 
 [ApiController]
-[Route("api/v{version:apiVersion}/chatbot")]
+[Route("api/v{version:apiVersion}/cliente")]
 [Produces("application/json")]
 [Tags("Clientes")]
 [ApiVersion(1.0)]
-[Authorize]
+//[Authorize]
 public class ClienteController : ControllerBase
 {
     private readonly IClienteService _clienteService;
@@ -84,12 +84,12 @@ public class ClienteController : ControllerBase
     /// Este endpoint requer autenticação.
     /// </summary>
     /// <param name="cliente">Objeto contendo os dados do cliente a serem atualizados.</param>
-    /// <response code="200">Cliente atualizado com sucesso.</response>
+    /// <response code="204">Cliente atualizado com sucesso.</response>
     /// <response code="401">Usuário não autenticado.</response>
     /// <response code="404">Cliente não encontrado.</response>
     /// <response code="500">Erro interno do servidor.</response>
     [HttpPatch]
-    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     [ProducesResponseType(StatusCodes.Status500InternalServerError)]
