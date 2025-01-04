@@ -34,6 +34,33 @@
             <response code="401">Usuário não autenticado.</response>
             <response code="500">Erro interno do servidor.</response>
         </member>
+        <member name="M:backend_portal_sv.Controllers.v1.ChatbotController.CriaHistorico(Services.Services.DTO.Chatbot.ChatDTO)">
+            <summary>
+            Cria o hístorico da conversa no banco de dados
+            </summary>
+            <returns>Status 200 vazio.</returns>
+            <response code="200">Retorna objeto vazio de sucesso.</response>
+            <response code="401">Usuário não autenticado.</response>
+            <response code="500">Erro interno do servidor.</response>
+        </member>
+        <member name="M:backend_portal_sv.Controllers.v1.ChatbotController.AtualizaHistorico(Services.Services.DTO.Chatbot.ChatDTO)">
+            <summary>
+            Atualiza o hístorico da conversa no banco de dados
+            </summary>
+            <returns>Status 204 vazio.</returns>
+            <response code="204">Histórico atualizado com sucesso.</response>
+            <response code="401">Usuário não autenticado.</response>
+            <response code="500">Erro interno do servidor.</response>
+        </member>
+        <member name="M:backend_portal_sv.Controllers.v1.ChatbotController.PegaHistoricos">
+            <summary>
+            Lista todo o hístorico da conversa no banco de dados
+            </summary>
+            <returns>Lista de conversas existente no banco.</returns>
+            <response code="200">Objeto lista de conversas.</response>
+            <response code="401">Usuário não autenticado.</response>
+            <response code="500">Erro interno do servidor.</response>
+        </member>
         <member name="M:ClienteController.#ctor(Services.Services.Cliente.Interfaces.IClienteService)">
             <summary>
             Inicializa o ClienteController com o serviço de cliente.
@@ -68,7 +95,7 @@
             Este endpoint requer autenticação.
             </summary>
             <param name="cliente">Objeto contendo os dados do cliente a serem atualizados.</param>
-            <response code="200">Cliente atualizado com sucesso.</response>
+            <response code="204">Cliente atualizado com sucesso.</response>
             <response code="401">Usuário não autenticado.</response>
             <response code="404">Cliente não encontrado.</response>
             <response code="500">Erro interno do servidor.</response>

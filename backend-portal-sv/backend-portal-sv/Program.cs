@@ -3,6 +3,7 @@ using backend_portal_sv.SwaggerConfig;
 using Infra.Conection;
 using Infra.Repository;
 using Infra.Repository.Interfaces;
+using Infra.Utils;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
@@ -27,6 +28,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddDbContext<ConnectionContext>();
 
 #region Repositorios
+builder.Services.AddScoped<IStorageHandler, StorageHandler>();
 builder.Services.AddScoped<IClienteRepository, ClienteRepository>();
 builder.Services.AddScoped<IChatbotRepository, ChatbotRepository>();
 #endregion

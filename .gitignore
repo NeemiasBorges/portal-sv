@@ -4,3 +4,8 @@ backend-portal-sv/backend-portal-sv/appsettings.Development.json
 backend-portal-sv/backend-portal-sv/bin/Debug/net8.0/appsettings.Development.json
 backend-portal-sv/backend-portal-sv/bin/Debug/net8.0/appsettings.json
 backend-portal-sv/backend-portal-sv/appsettings.Development.json
+/front-end-portal-sv/node_modules
+backend-portal-sv/backend-portal-sv/appsettings.Development.json
+backend-portal-sv/backend-portal-sv/appsettings.json
+backend-portal-sv/backend-portal-sv/bin/Debug/net8.0/appsettings.Development.json
+backend-portal-sv/backend-portal-sv/bin/Debug/net8.0/appsettings.json

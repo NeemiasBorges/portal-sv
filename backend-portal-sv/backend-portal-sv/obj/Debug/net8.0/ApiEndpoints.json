@@ -42,9 +42,151 @@
     ]
   },
   {
+    "ContainingType": "backend_portal_sv.Controllers.v1.ChatbotController",
+    "Method": "SendMessage",
+    "RelativePath": "api/v1/Chatbot",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "message",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 401
+      },
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 500
+      }
+    ],
+    "Tags": [
+      "ChatBot"
+    ]
+  },
+  {
+    "ContainingType": "backend_portal_sv.Controllers.v1.ChatbotController",
+    "Method": "AtualizaHistorico",
+    "RelativePath": "api/v1/Chatbot",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "chat",
+        "Type": "Services.Services.DTO.Chatbot.ChatDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 204
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 401
+      },
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 500
+      }
+    ],
+    "Tags": [
+      "ChatBot"
+    ]
+  },
+  {
+    "ContainingType": "backend_portal_sv.Controllers.v1.ChatbotController",
+    "Method": "PegaHistoricos",
+    "RelativePath": "api/v1/Chatbot",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 401
+      },
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 500
+      }
+    ],
+    "Tags": [
+      "ChatBot"
+    ]
+  },
+  {
+    "ContainingType": "backend_portal_sv.Controllers.v1.ChatbotController",
+    "Method": "CriaHistorico",
+    "RelativePath": "api/v1/Chatbot/cria-historico",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "chat",
+        "Type": "Services.Services.DTO.Chatbot.ChatDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 401
+      },
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 500
+      }
+    ],
+    "Tags": [
+      "ChatBot"
+    ]
+  },
+  {
     "ContainingType": "ClienteController",
     "Method": "GetAllClientes",
-    "RelativePath": "api/v1/chatbot",
+    "RelativePath": "api/v1/cliente",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -86,7 +228,7 @@
   {
     "ContainingType": "ClienteController",
     "Method": "UpdateCliente",
-    "RelativePath": "api/v1/chatbot",
+    "RelativePath": "api/v1/cliente",
     "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,
@@ -101,7 +243,7 @@
       {
         "Type": "System.Void",
         "MediaTypes": [],
-        "StatusCode": 200
+        "StatusCode": 204
       },
       {
         "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
@@ -128,46 +270,9 @@
     ]
   },
   {
-    "ContainingType": "backend_portal_sv.Controllers.v1.ChatbotController",
-    "Method": "SendMessage",
-    "RelativePath": "api/v1/Chatbot",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "message",
-        "Type": "System.String",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      },
-      {
-        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
-        "MediaTypes": [
-          "application/json"
-        ],
-        "StatusCode": 401
-      },
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 500
-      }
-    ],
-    "Tags": [
-      "ChatBot"
-    ]
-  },
-  {
     "ContainingType": "ClienteController",
     "Method": "GetClienteById",
-    "RelativePath": "api/v1/chatbot/{id}",
+    "RelativePath": "api/v1/cliente/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -211,7 +316,7 @@
   {
     "ContainingType": "ClienteController",
     "Method": "DeleteCliente",
-    "RelativePath": "api/v1/chatbot/{id}",
+    "RelativePath": "api/v1/cliente/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,

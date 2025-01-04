@@ -22,6 +22,40 @@ namespace Infra.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("Domain.Entity.Chatbot.Chat", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("Categoria")
+                        .HasColumnType("int");
+
+                    b.Property<string>("EmailCliente")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ResumoConversa")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Satisfacao")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("conversaConcluida")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("dataMensagem")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Chat");
+                });
+
             modelBuilder.Entity("Domain.Entity.Cliente", b =>
                 {
                     b.Property<int>("Id")
