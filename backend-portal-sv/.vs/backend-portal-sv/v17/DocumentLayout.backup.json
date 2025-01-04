@@ -54,8 +54,7 @@
               "RelativeToolTip": "backend-portal-sv\\SwaggerConfig\\SwaggerDefaultValues.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAAwBIAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-02T23:29:44.108Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-02T23:29:44.108Z"
             },
             {
               "$type": "Document",
@@ -67,21 +66,19 @@
               "RelativeToolTip": "backend-portal-sv\\SwaggerConfig\\ConfigureSwaggerGenOptions.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAA1wB8AAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-02T23:23:43.764Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-02T23:23:43.764Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "backend-portal-sv",
+              "Title": "backend-portal-sv.csproj",
               "DocumentMoniker": "C:\\Users\\ifspn\\OneDrive\\Desktop\\APPS\\backend-portal-sv\\backend-portal-sv\\backend-portal-sv\\backend-portal-sv.csproj",
               "RelativeDocumentMoniker": "backend-portal-sv\\backend-portal-sv.csproj",
               "ToolTip": "C:\\Users\\ifspn\\OneDrive\\Desktop\\APPS\\backend-portal-sv\\backend-portal-sv\\backend-portal-sv\\backend-portal-sv.csproj",
               "RelativeToolTip": "backend-portal-sv\\backend-portal-sv.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-01-02T23:05:32.365Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-02T23:05:32.365Z"
             },
             {
               "$type": "Document",
@@ -93,8 +90,7 @@
               "RelativeToolTip": "backend-portal-sv\\appsettings.Development.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-01-02T22:58:28.405Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-02T22:58:28.405Z"
             },
             {
               "$type": "Document",
@@ -106,8 +102,7 @@
               "RelativeToolTip": "backend-portal-sv\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-01-02T22:58:25.72Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-02T22:58:25.72Z"
             },
             {
               "$type": "Document",
@@ -119,8 +114,7 @@
               "RelativeToolTip": "backend-portal-sv\\Controllers\\v1\\ClienteController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-02T22:56:43.461Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-02T22:56:43.461Z"
             },
             {
               "$type": "Document",
@@ -132,8 +126,7 @@
               "RelativeToolTip": "backend-portal-sv\\Controllers\\v1\\ChatbotController.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAxwAgAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-02T22:54:56.626Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-02T22:54:56.626Z"
             },
             {
               "$type": "Document",
@@ -143,7 +136,7 @@
               "RelativeDocumentMoniker": "backend-portal-sv\\Program.cs",
               "ToolTip": "C:\\Users\\ifspn\\OneDrive\\Desktop\\APPS\\backend-portal-sv\\backend-portal-sv\\backend-portal-sv\\Program.cs",
               "RelativeToolTip": "backend-portal-sv\\Program.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAewDYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-02T22:52:22.308Z",
               "EditorCaption": ""

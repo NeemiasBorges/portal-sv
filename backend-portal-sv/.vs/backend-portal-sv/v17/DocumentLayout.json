@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\ifspn\\OneDrive\\Desktop\\APPS\\backend-portal-sv\\backend-portal-sv\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C986936E-BB37-4596-85E8-22A7722D763E}|backend-portal-sv\\backend-portal-sv.csproj|c:\\users\\ifspn\\onedrive\\desktop\\apps\\backend-portal-sv\\backend-portal-sv\\backend-portal-sv\\controllers\\v1\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C986936E-BB37-4596-85E8-22A7722D763E}|backend-portal-sv\\backend-portal-sv.csproj|solutionrelative:backend-portal-sv\\controllers\\v1\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C986936E-BB37-4596-85E8-22A7722D763E}|backend-portal-sv\\backend-portal-sv.csproj|c:\\users\\ifspn\\onedrive\\desktop\\apps\\backend-portal-sv\\backend-portal-sv\\backend-portal-sv\\controllers\\v1\\chatbotcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C986936E-BB37-4596-85E8-22A7722D763E}|backend-portal-sv\\backend-portal-sv.csproj|solutionrelative:backend-portal-sv\\controllers\\v1\\chatbotcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C986936E-BB37-4596-85E8-22A7722D763E}|backend-portal-sv\\backend-portal-sv.csproj|c:\\users\\ifspn\\onedrive\\desktop\\apps\\backend-portal-sv\\backend-portal-sv\\backend-portal-sv\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C986936E-BB37-4596-85E8-22A7722D763E}|backend-portal-sv\\backend-portal-sv.csproj|solutionrelative:backend-portal-sv\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -17,14 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C986936E-BB37-4596-85E8-22A7722D763E}|backend-portal-sv\\backend-portal-sv.csproj|c:\\users\\ifspn\\onedrive\\desktop\\apps\\backend-portal-sv\\backend-portal-sv\\backend-portal-sv\\backend-portal-sv.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{C986936E-BB37-4596-85E8-22A7722D763E}|backend-portal-sv\\backend-portal-sv.csproj|solutionrelative:backend-portal-sv\\backend-portal-sv.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C986936E-BB37-4596-85E8-22A7722D763E}|backend-portal-sv\\backend-portal-sv.csproj|c:\\users\\ifspn\\onedrive\\desktop\\apps\\backend-portal-sv\\backend-portal-sv\\backend-portal-sv\\controllers\\v1\\chatbotcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C986936E-BB37-4596-85E8-22A7722D763E}|backend-portal-sv\\backend-portal-sv.csproj|solutionrelative:backend-portal-sv\\controllers\\v1\\chatbotcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C986936E-BB37-4596-85E8-22A7722D763E}|backend-portal-sv\\backend-portal-sv.csproj|c:\\users\\ifspn\\onedrive\\desktop\\apps\\backend-portal-sv\\backend-portal-sv\\backend-portal-sv\\controllers\\v1\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C986936E-BB37-4596-85E8-22A7722D763E}|backend-portal-sv\\backend-portal-sv.csproj|solutionrelative:backend-portal-sv\\controllers\\v1\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C986936E-BB37-4596-85E8-22A7722D763E}|backend-portal-sv\\backend-portal-sv.csproj|c:\\users\\ifspn\\onedrive\\desktop\\apps\\backend-portal-sv\\backend-portal-sv\\backend-portal-sv\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -42,11 +42,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "SwaggerDefaultValues.cs",
               "DocumentMoniker": "C:\\Users\\ifspn\\OneDrive\\Desktop\\APPS\\backend-portal-sv\\backend-portal-sv\\backend-portal-sv\\SwaggerConfig\\SwaggerDefaultValues.cs",
               "RelativeDocumentMoniker": "backend-portal-sv\\SwaggerConfig\\SwaggerDefaultValues.cs",
@@ -58,7 +58,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "ConfigureSwaggerGenOptions.cs",
               "DocumentMoniker": "C:\\Users\\ifspn\\OneDrive\\Desktop\\APPS\\backend-portal-sv\\backend-portal-sv\\backend-portal-sv\\SwaggerConfig\\ConfigureSwaggerGenOptions.cs",
               "RelativeDocumentMoniker": "backend-portal-sv\\SwaggerConfig\\ConfigureSwaggerGenOptions.cs",
@@ -70,7 +70,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "backend-portal-sv.csproj",
               "DocumentMoniker": "C:\\Users\\ifspn\\OneDrive\\Desktop\\APPS\\backend-portal-sv\\backend-portal-sv\\backend-portal-sv\\backend-portal-sv.csproj",
               "RelativeDocumentMoniker": "backend-portal-sv\\backend-portal-sv.csproj",
@@ -106,37 +106,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "ClienteController.cs",
               "DocumentMoniker": "C:\\Users\\ifspn\\OneDrive\\Desktop\\APPS\\backend-portal-sv\\backend-portal-sv\\backend-portal-sv\\Controllers\\v1\\ClienteController.cs",
               "RelativeDocumentMoniker": "backend-portal-sv\\Controllers\\v1\\ClienteController.cs",
               "ToolTip": "C:\\Users\\ifspn\\OneDrive\\Desktop\\APPS\\backend-portal-sv\\backend-portal-sv\\backend-portal-sv\\Controllers\\v1\\ClienteController.cs",
               "RelativeToolTip": "backend-portal-sv\\Controllers\\v1\\ClienteController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAHQAAAAAAAAAAAAqwHgAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-02T22:56:43.461Z"
+              "WhenOpened": "2025-01-02T22:56:43.461Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "ChatbotController.cs",
               "DocumentMoniker": "C:\\Users\\ifspn\\OneDrive\\Desktop\\APPS\\backend-portal-sv\\backend-portal-sv\\backend-portal-sv\\Controllers\\v1\\ChatbotController.cs",
               "RelativeDocumentMoniker": "backend-portal-sv\\Controllers\\v1\\ChatbotController.cs",
               "ToolTip": "C:\\Users\\ifspn\\OneDrive\\Desktop\\APPS\\backend-portal-sv\\backend-portal-sv\\backend-portal-sv\\Controllers\\v1\\ChatbotController.cs",
               "RelativeToolTip": "backend-portal-sv\\Controllers\\v1\\ChatbotController.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAxwAgAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAqwCwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-02T22:54:56.626Z"
+              "WhenOpened": "2025-01-02T22:54:56.626Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\ifspn\\OneDrive\\Desktop\\APPS\\backend-portal-sv\\backend-portal-sv\\backend-portal-sv\\Program.cs",
               "RelativeDocumentMoniker": "backend-portal-sv\\Program.cs",
               "ToolTip": "C:\\Users\\ifspn\\OneDrive\\Desktop\\APPS\\backend-portal-sv\\backend-portal-sv\\backend-portal-sv\\Program.cs",
               "RelativeToolTip": "backend-portal-sv\\Program.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-02T22:52:22.308Z",
               "EditorCaption": ""
