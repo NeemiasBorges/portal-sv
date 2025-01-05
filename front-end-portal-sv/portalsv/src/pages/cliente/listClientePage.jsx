@@ -11,13 +11,13 @@ import "react-toastify/dist/ReactToastify.css";
 import WithCustomProgressBar from "../../components/Animated/Toast/WithCustomProgressBar";
 
 const ListClientePage = () => {
-  const notify = () => {
+  const notify = (messageToast) => {
     toast(
       ({ closeToast, toastProps }) => (
         <WithCustomProgressBar
           closeToast={closeToast}
           toastProps={toastProps}
-          data={{ message: "Cliente Cadastrado com sucesso" }}
+          data={{ message: messageToast }}
         />
       ),
       {
@@ -45,7 +45,12 @@ const ListClientePage = () => {
   const handleSuccess = () => {
     fetchClients();
     setIsModalOpen(false);
-    notify();
+    if (selectedRows.length === 1) {
+      handleEditClient();
+      notify("Cliente editado com sucesso!");
+    } else {
+      notify("Cliente cadastrado com sucesso!");
+    }
   };
 
   const handleEdit = () => {

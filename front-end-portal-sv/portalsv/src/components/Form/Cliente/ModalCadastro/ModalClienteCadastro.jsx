@@ -55,8 +55,8 @@ const ClienteCadastroModal = ({
       } else {
         await clienteService.createClient(data);
       }
-      onSuccess();
       reset();
+      return onSuccess();
     } catch (error) {
       console.error("Error ao salvar cliente:", error);
     }
@@ -163,6 +163,7 @@ const ClienteCadastroModal = ({
             Cancelar
           </button>
           <button
+            onClick={handleSubmit(onSubmit)}
             type="submit"
             className="px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700"
           >
