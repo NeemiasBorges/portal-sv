@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { FaTimes, FaRegSun, FaRobot } from "react-icons/fa";
+import { FaTimes, FaUser, FaRegSun, FaRobot, FaDoorOpen } from "react-icons/fa";
 import SidebarItem from "../SidebarItem/SidebarItemComponent";
 import { Container, Content } from "./styles";
 import { Link } from "react-router";
@@ -12,8 +12,17 @@ const Sidebar = ({ active, closeSidebar }) => {
         <Link to="/chatbot">
           <SidebarItem Icon={FaRobot} Text="Chatbot" />
         </Link>
+
+        <Link to="/">
+          <SidebarItem Icon={FaUser} Text="Clientes" />
+        </Link>
+
         <Link to="/configuracoes">
           <SidebarItem Icon={FaRegSun} Text="Configurações" />
+        </Link>
+
+        <Link to="/logout">
+          <SidebarItem Icon={FaDoorOpen} Text="Sair" />
         </Link>
       </Content>
     </Container>
