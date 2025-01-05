@@ -41,6 +41,7 @@ namespace Infra.Repository
 
         public async Task Update(Cliente cliente)
         {
+            _context.ChangeTracker.Clear(); 
             _context.Clientes.Update(cliente);
             await _context.SaveChangesAsync();
         }

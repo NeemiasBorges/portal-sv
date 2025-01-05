@@ -15,6 +15,11 @@ namespace Services.Services.DTO.Chatbot
 
         public ChatDTO() { }
         public ChatDTO(Chat chatEntity) {
+
+
+            if (chatEntity == null)
+                throw new ArgumentNullException(nameof(chatEntity), "O chat não pode ser nulo.");
+
             this.Id = chatEntity.Id;
             this.DataMensagem = chatEntity.dataMensagem;
             this.ResumoConversa = chatEntity.ResumoConversa;

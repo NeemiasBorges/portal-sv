@@ -8,6 +8,9 @@ namespace Services.Services.DTO.Cliente
 
         public ClienteDTO(Domain.Entity.Cliente cliente)
         {
+            if (cliente == null)
+                throw new ArgumentNullException(nameof(cliente), "O cliente não pode ser nulo.");
+
             this.Id = cliente.Id;
             this.Nome = cliente.nome;
             this.Email = cliente.email;
