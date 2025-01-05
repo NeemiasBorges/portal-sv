@@ -18,6 +18,14 @@ export const clienteService = {
     if (!response.ok) throw new Error("Falha ao deletar cliente");
   },
 
+  async getClient(id) {
+    const { baseUrl } = useEnv();
+    const response = await fetch(`${baseUrl}/cliente/${id}`, {
+      method: "GET",
+    });
+    if (!response.ok) throw new Error("Falha ao pegar o cliente");
+  },
+
   async createClient(clientData) {
     const { baseUrl } = useEnv();
 

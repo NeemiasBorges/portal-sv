@@ -7,6 +7,29 @@ export const useClientManagement = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [clearSelection, setClearSelection] = useState(false);
 
+  const fillForm = (client) => {
+    console.log("fillForm", client);
+    reset({
+      Nome: client.nome,
+      Email: client.email,
+      Telefone: client.telefone,
+      Cep: client.cep,
+      Cpf: client.cpf,
+      Sexo: client.sexo,
+    });
+  };
+
+  const resetForm = () => {
+    reset({
+      Nome: "",
+      Email: "",
+      Telefone: "",
+      Cep: "",
+      Cpf: "",
+      Sexo: "",
+    });
+  };
+
   const fetchClients = useCallback(async () => {
     try {
       const data = await clienteService.getClients();
@@ -36,6 +59,22 @@ export const useClientManagement = () => {
     }
   };
 
+  const handleEditClient = async () => {
+    if (selectedRows.length !== 1) return;
+
+    setIsLoading(true);
+    try {
+      await clienteService.getClient(selectedRows[0].id);
+      await fetchClients();
+
+      fillForm(selectedRows[0]);
+    } catch (error) {
+      console.error("Error ao pegar o cliente especifico:", error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   const handleRowSelection = ({ selectedRows }) => {
     setSelectedRows(selectedRows);
     setClearSelection(false);
@@ -48,7 +87,10 @@ export const useClientManagement = () => {
     clearSelection,
     setClearSelection,
     handleDelete,
+    handleEditClient,
     handleRowSelection,
     fetchClients,
+    fillForm,
+    resetForm,
   };
 };
