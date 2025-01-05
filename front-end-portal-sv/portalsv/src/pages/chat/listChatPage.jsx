@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Header from "../../components/Header/HeaderComponent";
 import DataTable from "react-data-table-component";
 import { chatbotColumns } from "../../data/columnsData/chatbotColumns";
@@ -22,6 +22,7 @@ function ListChat() {
     <div>
       <Header />
       <DataTable
+        className="p-10 border-solid border-2 border-gray-300 mt-3"
         title="Conversas"
         pagination
         selectableRows
@@ -29,6 +30,7 @@ function ListChat() {
         data={chats}
       />
       <ChatHistoryModal
+        className="p-10"
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
         chatData={modalData}

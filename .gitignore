@@ -11,3 +11,4 @@ backend-portal-sv/backend-portal-sv/bin/Debug/net8.0/appsettings.Development.jso
 backend-portal-sv/backend-portal-sv/bin/Debug/net8.0/appsettings.json
 front-end-portal-sv/.vscode/launch.json
 front-end-portal-sv/.vscode/settings.json
+front-end-portal-sv/portalsv/.env

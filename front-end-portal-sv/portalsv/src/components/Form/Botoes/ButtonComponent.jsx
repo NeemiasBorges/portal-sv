@@ -1,11 +1,14 @@
-function Button() {
+// components/Form/Botoes/ButtonComponent.jsx
+const Button = ({ children, onClick, disabled, className }) => {
   return (
-    <div>
-      <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-        props.children
-      </button>
-    </div>
+    <button
+      onClick={onClick}
+      disabled={disabled}
+      className={`px-4 py-2 rounded ${className}`}
+    >
+      {children}
+    </button>
   );
-}
+};
 
 export default Button;
