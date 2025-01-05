@@ -1,4 +1,5 @@
 ﻿using Domain.Entity;
+using Domain.Entity.Chatbot;
 using Infra.Conection;
 using Infra.Repository.Interfaces;
 using Microsoft.EntityFrameworkCore;
@@ -23,7 +24,7 @@ namespace Infra.Repository
             if (cliente == null)
                 throw new ArgumentNullException(nameof(cliente), "O cliente não pode ser nulo.");
 
-            _context.Clientes.Remove(cliente);
+            await _context.Clientes.Where(c => c.Id == cliente.Id).ExecuteDeleteAsync();
             await _context.SaveChangesAsync();
         }
 
@@ -41,6 +42,7 @@ namespace Infra.Repository
         public async Task Update(Cliente cliente)
         {
             _context.Clientes.Update(cliente);
+            await _context.SaveChangesAsync();
         }
     }
 }
