@@ -27,7 +27,7 @@ export const useChatSession = () => {
           {
             text: "Olá, como posso ajudar com o seu seguro de viagem hoje?",
             sender: "bot",
-            timestamp: new Date(),
+            timestamp: new Date().toISOString(),
           },
         ],
       }));

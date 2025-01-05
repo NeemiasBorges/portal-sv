@@ -5,17 +5,20 @@ export const useMessageHandling = ({
   chatSession,
   setIsOpen,
   clearChatSession,
+  setChatSession,
+  setIsTyping,
 }) => {
   const [inputMessage, setInputMessage] = useState("");
 
   const startNewChat = (email) => {
-    const newId = uuidv4();
+    // Generate UUID once when starting a new chat
+    const sessionId = uuidv4();
     setChatSession({
       email,
       messages: [],
       isCompleted: false,
       satisfaction: null,
-      sessionId: newId,
+      sessionId, // Store the UUID in the chat session
     });
   };
 
@@ -25,7 +28,7 @@ export const useMessageHandling = ({
     const newMessage = {
       text,
       sender: "user",
-      timestamp: new Date(),
+      timestamp: new Date().toISOString(),
     };
 
     setChatSession((prev) => ({
@@ -60,7 +63,7 @@ export const useMessageHandling = ({
           {
             text: botResponse,
             sender: "bot",
-            timestamp: new Date(),
+            timestamp: new Date().toISOString(),
           },
         ],
       }));
@@ -74,7 +77,7 @@ export const useMessageHandling = ({
           {
             text: "Desculpe, ocorreu um erro ao processar sua mensagem.",
             sender: "bot",
-            timestamp: new Date(),
+            timestamp: new Date().toISOString(),
           },
         ],
       }));
@@ -88,7 +91,7 @@ export const useMessageHandling = ({
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            id: chatSession.sessionId,
+            id: chatSession.sessionId, // Use the stored sessionId
             resumoConversa: JSON.stringify(chatSession.messages, null, 2),
             conversaConcluida: true,
             emailCliente: chatSession.email,
@@ -113,7 +116,7 @@ export const useMessageHandling = ({
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          chatId: chatSession.sessionId,
+          Id: chatSession.sessionId,
           Satisfacao: rating.toString(),
           resumoConversa: JSON.stringify(chatSession.messages, null, 2),
           conversaConcluida: true,

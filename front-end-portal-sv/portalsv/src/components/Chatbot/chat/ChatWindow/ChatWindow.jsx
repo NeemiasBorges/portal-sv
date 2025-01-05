@@ -10,8 +10,15 @@ import { useMessageHandling } from "../../../../hooks/useMessageHandling";
 import { Header } from "./Header";
 
 export const ChatWindow = () => {
-  const { isOpen, setIsOpen, chatSession, isTyping, clearChatSession } =
-    useChatSession();
+  const {
+    isOpen,
+    setIsOpen,
+    chatSession,
+    setChatSession,
+    isTyping,
+    setIsTyping,
+    clearChatSession,
+  } = useChatSession();
 
   const {
     inputMessage,
@@ -20,7 +27,13 @@ export const ChatWindow = () => {
     handleComplete,
     handleSatisfaction,
     startNewChat,
-  } = useMessageHandling({ chatSession, setIsOpen, clearChatSession });
+  } = useMessageHandling({
+    chatSession,
+    setChatSession,
+    setIsOpen,
+    clearChatSession,
+    setIsTyping,
+  });
 
   return (
     <div className="fixed bottom-4 right-4 z-50">
