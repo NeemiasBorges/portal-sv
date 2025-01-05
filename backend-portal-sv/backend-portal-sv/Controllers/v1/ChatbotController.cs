@@ -14,6 +14,11 @@ namespace backend_portal_sv.Controllers.v1
     public class ChatbotController : ControllerBase
     {
         private readonly IChatbotService _chatbotService;
+
+        /// <summary>
+        /// Inicializa o ChatbotController com o serviço de LLM.
+        /// </summary>
+        /// <param name="chatbotService">Serviço responsável pelas operações relacionadas ao chatbot e ao LLM.</param>
         public ChatbotController(IChatbotService chatbotService)
         {
             _chatbotService = chatbotService ?? throw new ArgumentNullException(nameof(chatbotService));
@@ -48,19 +53,19 @@ namespace backend_portal_sv.Controllers.v1
         /// Cria o hístorico da conversa no banco de dados
         /// </summary>
         /// <returns>Status 200 vazio.</returns>
-        /// <response code="200">Retorna objeto vazio de sucesso.</response>
+        /// <response code="201">Retorna objeto vazio de sucesso.</response>
         /// <response code="401">Usuário não autenticado.</response>
         /// <response code="500">Erro interno do servidor.</response>
 
         [HttpPost("cria-historico")]
-        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> CriaHistorico(ChatDTO chat){
             try
             {
                 await _chatbotService.CriaHistorico(chat);
-                return Ok(); 
+                return Created(); 
             }
             catch (Exception e)
             {

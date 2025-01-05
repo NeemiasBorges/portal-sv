@@ -1,5 +1,4 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Services.Services.DTO.Cliente
 {
@@ -20,34 +19,34 @@ namespace Services.Services.DTO.Cliente
         }
 
         [Required]
-        public int Id { get; private set; }
+        public int Id { get; set; }
 
         [Required]
         [MaxLength(100)]
         [MinLength(3)]
-        public string Nome { get; private set; }
+        public string Nome { get; set; }
 
         [Required]
         [EmailAddress]
-        public string Email { get; private set; }
+        public string Email { get; set; }
 
         [Required]
         [StringLength(11, MinimumLength = 11, ErrorMessage = "O CPF deve conter exatamente 11 caracteres.")]
-        public string Cpf { get; private set; }
+        public string Cpf { get; set; }
 
         [Phone]
-        public string Telefone { get; private set; }
+        public string Telefone { get; set; }
 
         [Required]
         [RegularExpression("M|F", ErrorMessage = "Sexo deve ser 'M' ou 'F'.")]
-        public string Sexo { get; private set; }
+        public string Sexo { get; set; }
 
         [Required]
         [StringLength(8, MinimumLength = 8, ErrorMessage = "O CEP deve conter exatamente 8 caracteres.")]
-        public string Cep { get; private set; }
+        public string Cep { get; set; }
 
         [Required]
-        public DateTime DataCriacao { get; private set; }
+        public DateTime DataCriacao { get; set; }
 
         public Domain.Entity.Cliente ToEntity()
         {

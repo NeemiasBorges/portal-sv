@@ -25,6 +25,12 @@
             <response code="200">Retorna o token JWT gerado com sucesso.</response>
             <response code="400">Usuário ou senha inválidos.</response>
         </member>
+        <member name="M:backend_portal_sv.Controllers.v1.ChatbotController.#ctor(Services.Services.Chatbot.Interface.IChatbotService)">
+            <summary>
+            Inicializa o ChatbotController com o serviço de LLM.
+            </summary>
+            <param name="chatbotService">Serviço responsável pelas operações relacionadas ao chatbot e ao LLM.</param>
+        </member>
         <member name="M:backend_portal_sv.Controllers.v1.ChatbotController.SendMessage(System.String)">
             <summary>
             Se comunica com o LLM e esperaa resposta da API
@@ -39,7 +45,7 @@
             Cria o hístorico da conversa no banco de dados
             </summary>
             <returns>Status 200 vazio.</returns>
-            <response code="200">Retorna objeto vazio de sucesso.</response>
+            <response code="201">Retorna objeto vazio de sucesso.</response>
             <response code="401">Usuário não autenticado.</response>
             <response code="500">Erro interno do servidor.</response>
         </member>
@@ -66,6 +72,16 @@
             Inicializa o ClienteController com o serviço de cliente.
             </summary>
             <param name="clienteService">Serviço responsável pelas operações relacionadas aos clientes.</param>
+        </member>
+        <member name="M:ClienteController.Create(Services.Services.DTO.Cliente.ClienteDTO)">
+            <summary>
+            Cadastra um novo cliente a base de dados. 
+            Este endpoint requer autenticação.
+            </summary>
+            <returns>Lista de clientes cadastrados.</returns>
+            <response code="201">Criacao de clientes retorna sucesso.</response>
+            <response code="401">Usuário não autenticado.</response>
+            <response code="500">Erro interno do servidor.</response>
         </member>
         <member name="M:ClienteController.GetAllClientes(System.Int32,System.Int32)">
             <summary>
@@ -106,7 +122,7 @@
             Este endpoint requer autenticação.
             </summary>
             <param name="id">ID do cliente a ser deletado.</param>
-            <response code="200">Cliente deletado com sucesso.</response>
+            <response code="204">Cliente deletado com sucesso.</response>
             <response code="401">Usuário não autenticado.</response>
             <response code="404">Cliente não encontrado.</response>
             <response code="500">Erro interno do servidor.</response>

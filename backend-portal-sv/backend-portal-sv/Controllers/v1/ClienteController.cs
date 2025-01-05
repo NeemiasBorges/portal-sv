@@ -24,6 +24,32 @@ public class ClienteController : ControllerBase
     }
 
     /// <summary>
+    /// Cadastra um novo cliente a base de dados. 
+    /// Este endpoint requer autenticação.
+    /// </summary>
+    /// <returns>Lista de clientes cadastrados.</returns>
+    /// <response code="201">Criacao de clientes retorna sucesso.</response>
+    /// <response code="401">Usuário não autenticado.</response>
+    /// <response code="500">Erro interno do servidor.</response>
+    [HttpPost]
+    [ProducesResponseType(StatusCodes.Status201Created)]
+    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+    public async Task<IActionResult> Create(ClienteDTO cliente)
+    {
+        try
+        {
+            await _clienteService.Add(cliente);
+            return Created();
+        }
+        catch (Exception ex)
+        {
+            throw;
+        }
+    }
+
+
+    /// <summary>
     /// Retorna todos os clientes cadastrados. 
     /// Este endpoint requer autenticação.
     /// </summary>
@@ -116,12 +142,12 @@ public class ClienteController : ControllerBase
     /// Este endpoint requer autenticação.
     /// </summary>
     /// <param name="id">ID do cliente a ser deletado.</param>
-    /// <response code="200">Cliente deletado com sucesso.</response>
+    /// <response code="204">Cliente deletado com sucesso.</response>
     /// <response code="401">Usuário não autenticado.</response>
     /// <response code="404">Cliente não encontrado.</response>
     /// <response code="500">Erro interno do servidor.</response>
     [HttpDelete("{id:int}")]
-    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     [ProducesResponseType(StatusCodes.Status500InternalServerError)]

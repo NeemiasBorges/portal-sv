@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\ifspn\\OneDrive\\Desktop\\APPS\\backend-portal-sv\\backend-portal-sv\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ifspn\\OneDrive\\Desktop\\APPS\\backend-portal-sv\\backend-portal-sv\\Infra\\Migrations\\20250105024951_migrationTest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Infra\\Migrations\\20250105024951_migrationTest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C986936E-BB37-4596-85E8-22A7722D763E}|backend-portal-sv\\backend-portal-sv.csproj|c:\\users\\ifspn\\onedrive\\desktop\\apps\\backend-portal-sv\\backend-portal-sv\\backend-portal-sv\\controllers\\v1\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C986936E-BB37-4596-85E8-22A7722D763E}|backend-portal-sv\\backend-portal-sv.csproj|solutionrelative:backend-portal-sv\\controllers\\v1\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C986936E-BB37-4596-85E8-22A7722D763E}|backend-portal-sv\\backend-portal-sv.csproj|c:\\users\\ifspn\\onedrive\\desktop\\apps\\backend-portal-sv\\backend-portal-sv\\backend-portal-sv\\controllers\\v1\\chatbotcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C986936E-BB37-4596-85E8-22A7722D763E}|backend-portal-sv\\backend-portal-sv.csproj|solutionrelative:backend-portal-sv\\controllers\\v1\\chatbotcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "20250105024951_migrationTest.cs",
-              "DocumentMoniker": "C:\\Users\\ifspn\\OneDrive\\Desktop\\APPS\\backend-portal-sv\\backend-portal-sv\\Infra\\Migrations\\20250105024951_migrationTest.cs",
-              "RelativeDocumentMoniker": "Infra\\Migrations\\20250105024951_migrationTest.cs",
-              "ToolTip": "C:\\Users\\ifspn\\OneDrive\\Desktop\\APPS\\backend-portal-sv\\backend-portal-sv\\Infra\\Migrations\\20250105024951_migrationTest.cs",
-              "RelativeToolTip": "Infra\\Migrations\\20250105024951_migrationTest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "ClienteController.cs",
+              "DocumentMoniker": "C:\\Users\\ifspn\\OneDrive\\Desktop\\APPS\\backend-portal-sv\\backend-portal-sv\\backend-portal-sv\\Controllers\\v1\\ClienteController.cs",
+              "RelativeDocumentMoniker": "backend-portal-sv\\Controllers\\v1\\ClienteController.cs",
+              "ToolTip": "C:\\Users\\ifspn\\OneDrive\\Desktop\\APPS\\backend-portal-sv\\backend-portal-sv\\backend-portal-sv\\Controllers\\v1\\ClienteController.cs",
+              "RelativeToolTip": "backend-portal-sv\\Controllers\\v1\\ClienteController.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwCEAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T02:49:51.931Z",
+              "WhenOpened": "2025-01-05T06:26:47.297Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ChatbotController.cs",
+              "DocumentMoniker": "C:\\Users\\ifspn\\OneDrive\\Desktop\\APPS\\backend-portal-sv\\backend-portal-sv\\backend-portal-sv\\Controllers\\v1\\ChatbotController.cs",
+              "RelativeDocumentMoniker": "backend-portal-sv\\Controllers\\v1\\ChatbotController.cs",
+              "ToolTip": "C:\\Users\\ifspn\\OneDrive\\Desktop\\APPS\\backend-portal-sv\\backend-portal-sv\\backend-portal-sv\\Controllers\\v1\\ChatbotController.cs",
+              "RelativeToolTip": "backend-portal-sv\\Controllers\\v1\\ChatbotController.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-05T06:26:39.137Z",
               "EditorCaption": ""
             }
           ]
