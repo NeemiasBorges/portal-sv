@@ -9,3 +9,5 @@ backend-portal-sv/backend-portal-sv/appsettings.Development.json
 backend-portal-sv/backend-portal-sv/appsettings.json
 backend-portal-sv/backend-portal-sv/bin/Debug/net8.0/appsettings.Development.json
 backend-portal-sv/backend-portal-sv/bin/Debug/net8.0/appsettings.json
+front-end-portal-sv/.vscode/launch.json
+front-end-portal-sv/.vscode/settings.json

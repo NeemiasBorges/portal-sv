@@ -15,13 +15,13 @@ namespace Services.Services.DTO.Chatbot
 
         public ChatDTO() { }
         public ChatDTO(Chat chatEntity) {
-            new ChatDTO(chatEntity.Id,
-                          chatEntity.dataMensagem,
-                          chatEntity.ResumoConversa,
-                          chatEntity.conversaConcluida,
-                          chatEntity.EmailCliente,
-                          chatEntity.Categoria,
-                          chatEntity.Satisfacao);
+            this.Id = chatEntity.Id;
+            this.DataMensagem = chatEntity.dataMensagem;
+            this.ResumoConversa = chatEntity.ResumoConversa;
+            this.ConversaConcluida = chatEntity.conversaConcluida;
+            this.EmailCliente = chatEntity.EmailCliente;
+            this.Categoria = chatEntity.Categoria;
+            this.Satisfacao  = chatEntity.Satisfacao;
         }
 
         public ChatDTO(Guid id, DateTime dataMensagem, string resumoConversa, bool conversaConcluida, string emailCliente, CategoriaConversa categoria, string satisfacao)
