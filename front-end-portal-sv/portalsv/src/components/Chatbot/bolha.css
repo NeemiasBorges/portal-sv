@@ -1,0 +1,13 @@
+.bolha {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  margin: 0;
+  background-color: #e224a9;
+}
+
+hover:bolha {
+  background-color: #a34888;
+}
+/* 00cb75
+00cb75 */
