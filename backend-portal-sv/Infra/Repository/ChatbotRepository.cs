@@ -50,18 +50,11 @@ namespace Infra.Repository
 
         public async Task<string> SendMessageAsync(string userMessage)
         {
-            try
-            {
-                var prompt = await CreateChatPrompt(userMessage, await _storageHandler.GetPrecosParaTodosDestinosAsync());
-                var payload = await CreateRequestPayload(prompt);
-                var response = await _httpClient.PostAsync(_apiUrl, SerializePayload(payload));
+            var prompt = await CreateChatPrompt(userMessage, await _storageHandler.GetPrecosParaTodosDestinosAsync());
+            var payload = await CreateRequestPayload(prompt);
+            var response = await _httpClient.PostAsync(_apiUrl, SerializePayload(payload));
 
-                return await HandleResponseAsync(response);
-            }
-            catch (Exception ex)
-            {
-                throw new ApplicationException($"Erro ao processar o request: {ex.Message}", ex);
-            }
+            return await HandleResponseAsync(response);
         }
 
         public async Task<string> CreateChatPrompt(string userMessage, string destinationPrices)
@@ -101,72 +94,44 @@ namespace Infra.Repository
 
         public async Task CriaHistorico(Chat chat)
         {
-            try
-            {
-                await _context.Chat.AddAsync(chat);
-                await _context.SaveChangesAsync();
-            }
-            catch (Exception ex)
-            {
-                throw new ApplicationException("Erro ao salvar histórico", ex);
-            }
+            await _context.Chat.AddAsync(chat);
+            await _context.SaveChangesAsync();
         }
 
         public async Task AtualizaHistorico(Chat chat)
         {
-            try
-            {
-                var chatId = chat.Id;
-                var satisfacao = chat.Satisfacao;
+            var chatId = chat.Id;
+            var satisfacao = chat.Satisfacao;
 
-                await _context.Chat.Where(c => c.Id == chatId).ExecuteUpdateAsync(s => s.SetProperty(b => b.Satisfacao, satisfacao));
-                await _context.SaveChangesAsync();
-            }
-            catch (Exception ex)
-            {
-                throw new ApplicationException("Erro ao atualizar histórico", ex);
-            }
+            await _context.Chat.Where(c => c.Id == chatId).ExecuteUpdateAsync(s => s.SetProperty(b => b.Satisfacao, satisfacao));
+            await _context.SaveChangesAsync();
         }
 
         public async Task<List<Chat>> PegaHistoricos()
         {
-            try
-            {
-                return await _context.Chat.ToListAsync();
-            }
-            catch (Exception ex)
-            {
-                throw new ApplicationException("Erro ao buscar históricos", ex);
-            }
+            return await _context.Chat.ToListAsync();
         }
 
         public async Task<int> validaCategoriaComLLM(string resumoConversa)
         {
-            try
+            var prompt = await CreateCategoryPrompt(resumoConversa);
+            var payload = await CreateRequestPayload(prompt);
+
+            var payloadJson = JsonConvert.SerializeObject(payload, new JsonSerializerSettings
             {
-                var prompt = await CreateCategoryPrompt(resumoConversa);
-                var payload = await CreateRequestPayload(prompt);
+                ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+            });
 
-                var payloadJson = JsonConvert.SerializeObject(payload, new JsonSerializerSettings
-                {
-                    ReferenceLoopHandling = ReferenceLoopHandling.Ignore
-                });
+            var response = await _httpClient.PostAsync(_apiUrl, new StringContent(payloadJson, Encoding.UTF8, "application/json"));
+            var result = await HandleResponseAsync(response);
 
-                var response = await _httpClient.PostAsync(_apiUrl, new StringContent(payloadJson, Encoding.UTF8, "application/json"));
-                var result = await HandleResponseAsync(response);
-
-                return int.TryParse(result, out var category) ? category : 10; 
-            }
-            catch (Exception ex)
-            {
-                throw new ApplicationException($"Erro ao validar categoria: {ex.Message}", ex);
-            }
+            return int.TryParse(result, out var category) ? category : 10;
         }
 
 
         public async Task<string> CreateCategoryPrompt(string contexto)
         {
-            return @$"Instruction: You are a virtual assistant specialized in categorizing information based on specific contexts. Task: Review the information provided in the DbContextOptions and determine if the exchange between the user and the bot falls into one of the following categories: 0 = CoberturaDoSeguro, 1 = PrecosECotacoes, 2 = ContratacaoERenovacao, 3 = AssistenciaDuranteAViagem, 4 = ReembolsosEReivindicacoes, 5 = AlteracoesNaApolice, 6 = DuvidasSobreDestinos, 7 = PromocoesEDescontos, 8 = ProblemasTecnicos, 9 = EsclarecimentoDeTermos, 10 = Outros. Output Rules: If the context does not fit any category or cannot be determined, return only the number 10. Output only a number. Example: User: ""Olá, gostaria de saber o preço para Bariloche com 1 pessoa."" Bot: ""Irá sair 800 reais por dia."" Category: 1 Context: {contexto.Replace("[","").Replace("]", "").Replace("{","").Replace("}", "")} Output: Just a number.".Replace("\n","").Replace("\"","");
+            return @$"Instruction: You are a virtual assistant specialized in categorizing information based on specific contexts. Task: Review the information provided in the DbContextOptions and determine if the exchange between the user and the bot falls into one of the following categories: 0 = CoberturaDoSeguro, 1 = PrecosECotacoes, 2 = ContratacaoERenovacao, 3 = AssistenciaDuranteAViagem, 4 = ReembolsosEReivindicacoes, 5 = AlteracoesNaApolice, 6 = DuvidasSobreDestinos, 7 = PromocoesEDescontos, 8 = ProblemasTecnicos, 9 = EsclarecimentoDeTermos, 10 = Outros. Output Rules: If the context does not fit any category or cannot be determined, return only the number 10. Output only a number. Example: User: ""Olá, gostaria de saber o preço para Bariloche com 1 pessoa."" Bot: ""Irá sair 800 reais por dia."" Category: 1 Context: {contexto.Replace("[", "").Replace("]", "").Replace("{", "").Replace("}", "")} Output: Just a number.".Replace("\n", "").Replace("\"", "");
         }
     }
 }

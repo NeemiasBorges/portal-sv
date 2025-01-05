@@ -14,65 +14,33 @@ namespace Infra.Repository
         }
         public async Task Add(Cliente cliente)
         {
-            try
-            {
-                await _context.Clientes.AddAsync(cliente);
-                await _context.SaveChangesAsync();  
-            }
-            catch (Exception e)
-            {
-                throw new Exception(e.Message);
-            }
+            await _context.Clientes.AddAsync(cliente);
+            await _context.SaveChangesAsync();
         }
 
         public async Task Delete(Cliente cliente)
         {
-            try
-            {
-                _context.Clientes.Remove(cliente);
-                await _context.SaveChangesAsync();
-            }
-            catch (Exception e)
-            {
-                throw new Exception(e.Message);
-            }
+            if (cliente == null)
+                throw new ArgumentNullException(nameof(cliente), "O cliente não pode ser nulo.");
+
+            _context.Clientes.Remove(cliente);
+            await _context.SaveChangesAsync();
         }
 
         public async Task<Cliente> Get(int id)
         {
-            try
-            {
-                return await _context.Clientes.FindAsync(id);
-            }
-            catch (Exception e)
-            {
-                throw new Exception(e.Message);
-            }
+            return await _context.Clientes.FindAsync(id);
         }
 
         public async Task<List<Cliente>> GetAll(int numero_pagina, int quantidade_p_pagina)
         {
-            try
-            {
-                var listaClientes = await _context.Clientes.Skip(numero_pagina * quantidade_p_pagina).Take(quantidade_p_pagina).ToListAsync();
-                return listaClientes;
-            }
-            catch (Exception e)
-            {
-                throw new Exception(e.Message);
-            }
+            var listaClientes = await _context.Clientes.Skip(numero_pagina * quantidade_p_pagina).Take(quantidade_p_pagina).ToListAsync();
+            return listaClientes;
         }
 
         public async Task Update(Cliente cliente)
         {
-            try
-            {
-                _context.Clientes.Update(cliente);
-            }
-            catch (Exception e)
-            {
-                throw new Exception(e.Message);
-            }
+            _context.Clientes.Update(cliente);
         }
     }
 }
