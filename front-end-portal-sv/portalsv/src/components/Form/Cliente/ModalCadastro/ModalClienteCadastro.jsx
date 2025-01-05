@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import Modal from "react-modal";
 import { clienteService } from "../../../../services/clienteService";
-import { PATTERNS } from "./constants";
 import { modalStyles } from "./styles";
 import FormField from "./FormField";
 
@@ -12,42 +11,55 @@ const ClienteCadastroModal = ({
   onSuccess,
   isEditMode,
   client,
+  formData,
 }) => {
   const {
     register,
     handleSubmit,
     formState: { errors },
     reset,
-  } = useForm();
+  } = useForm({
+    defaultValues: formData,
+  });
 
   useEffect(() => {
-    if (isOpen && client && isEditMode) {
-      reset({
-        Nome: client.nome,
-        Email: client.email,
-        Telefone: client.telefone,
-        Cep: client.cep,
-        Cpf: client.cpf,
-        Sexo: client.sexo,
-      });
+    if (isOpen) {
+      if (isEditMode && client) {
+        reset({
+          Nome: client.nome,
+          Email: client.email,
+          Telefone: client.telefone,
+          Cep: client.cep,
+          Cpf: client.cpf,
+          Sexo: client.sexo,
+          Id: client.id,
+        });
+      } else {
+        reset({
+          Nome: "",
+          Email: "",
+          Telefone: "",
+          Cep: "",
+          Cpf: "",
+          Sexo: "",
+        });
+      }
     }
-
-    if (isOpen && client === null) {
-      reset({
-        Nome: "",
-        Email: "",
-        Telefone: "",
-        Cep: "",
-        Cpf: "",
-        Sexo: "",
-      });
-    }
-  }, [isOpen, client, reset]);
+  }, [isOpen, client, isEditMode, reset]);
 
   const onSubmit = async (data) => {
-    console.log("Verificacao dos dados", data);
-    // Lógica para salvar os dados
-    onSuccess();
+    try {
+      if (isEditMode) {
+        data.Id = client.id;
+        await clienteService.updateClient(data);
+      } else {
+        await clienteService.createClient(data);
+      }
+      onSuccess();
+      reset();
+    } catch (error) {
+      console.error("Error ao salvar cliente:", error);
+    }
   };
 
   return (
@@ -135,7 +147,17 @@ const ClienteCadastroModal = ({
         <div className="flex justify-end gap-4 mt-6">
           <button
             type="button"
-            onClick={onClose}
+            onClick={() => {
+              reset({
+                Nome: "",
+                Email: "",
+                Telefone: "",
+                Cep: "",
+                Cpf: "",
+                Sexo: "",
+              });
+              onClose();
+            }}
             className="px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50"
           >
             Cancelar

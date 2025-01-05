@@ -29,7 +29,7 @@ export const columns = [
   },
   {
     name: "Sexo",
-    selector: (row) => row.sexo || "N/A",
+    selector: (row) => (row.sexo == "M" ? "Masculino" : "Feminino") || "N/A",
     sortable: true,
   },
   {

@@ -49,4 +49,27 @@ export const clienteService = {
       throw error;
     }
   },
+
+  async updateClient(clientData) {
+    const { baseUrl } = useEnv();
+    try {
+      const response = await fetch(`${baseUrl}/cliente`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...clientData,
+          DataCriacao: new Date().toISOString(),
+        }),
+      });
+
+      if (response.status !== 204) {
+        throw new Error(`Falha ao criar cliente. Status: ${response.status}`);
+      }
+    } catch (error) {
+      console.error("Erro na criação do cliente:", error.message);
+      throw error;
+    }
+  },
 };

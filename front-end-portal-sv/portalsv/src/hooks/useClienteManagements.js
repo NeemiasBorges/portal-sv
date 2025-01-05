@@ -6,10 +6,17 @@ export const useClientManagement = () => {
   const [selectedRows, setSelectedRows] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [clearSelection, setClearSelection] = useState(false);
+  const [formData, setFormData] = useState({
+    Nome: "",
+    Email: "",
+    Telefone: "",
+    Cep: "",
+    Cpf: "",
+    Sexo: "",
+  });
 
-  const fillForm = (client) => {
-    console.log("fillForm", client);
-    reset({
+  const fillForm = useCallback((client) => {
+    setFormData({
       Nome: client.nome,
       Email: client.email,
       Telefone: client.telefone,
@@ -17,10 +24,10 @@ export const useClientManagement = () => {
       Cpf: client.cpf,
       Sexo: client.sexo,
     });
-  };
+  }, []);
 
-  const resetForm = () => {
-    reset({
+  const resetForm = useCallback(() => {
+    setFormData({
       Nome: "",
       Email: "",
       Telefone: "",
@@ -28,7 +35,7 @@ export const useClientManagement = () => {
       Cpf: "",
       Sexo: "",
     });
-  };
+  }, []);
 
   const fetchClients = useCallback(async () => {
     try {
@@ -52,6 +59,7 @@ export const useClientManagement = () => {
       await fetchClients();
       setSelectedRows([]);
       setClearSelection(true);
+      resetForm();
     } catch (error) {
       console.error("Error ao deletar o cliente:", error);
     } finally {
@@ -64,10 +72,8 @@ export const useClientManagement = () => {
 
     setIsLoading(true);
     try {
-      await clienteService.getClient(selectedRows[0].id);
-      await fetchClients();
-
-      fillForm(selectedRows[0]);
+      const client = await clienteService.getClient(selectedRows[0].id);
+      fillForm(client);
     } catch (error) {
       console.error("Error ao pegar o cliente especifico:", error);
     } finally {
@@ -92,5 +98,6 @@ export const useClientManagement = () => {
     fetchClients,
     fillForm,
     resetForm,
+    formData,
   };
 };
