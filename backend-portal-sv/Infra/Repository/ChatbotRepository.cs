@@ -116,7 +116,10 @@ namespace Infra.Repository
         {
             try
             {
-                _context.Chat.Update(chat);
+                var chatId = chat.Id;
+                var satisfacao = chat.Satisfacao;
+
+                await _context.Chat.Where(c => c.Id == chatId).ExecuteUpdateAsync(s => s.SetProperty(b => b.Satisfacao, satisfacao));
                 await _context.SaveChangesAsync();
             }
             catch (Exception ex)

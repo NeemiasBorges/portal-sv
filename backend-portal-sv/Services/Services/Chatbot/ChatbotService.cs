@@ -20,8 +20,6 @@ namespace Services.Services.Chatbot
         {
             try
             {
-                chat.Satisfacao = chat.Satisfacao.Replace("\"","");
-                chat.ResumoConversa = chat.ResumoConversa.Replace("\"","");
                 await _chatbotRepository.AtualizaHistorico(chat.ToEntity());
             }
             catch (Exception e)
