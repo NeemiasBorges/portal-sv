@@ -34,6 +34,8 @@ const ListClientePage = () => {
     handleDelete,
     handleRowSelection,
     fetchClients,
+    clearSelection,
+    setClearSelection, // Importado do hook
   } = useClientManagement();
 
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -42,6 +44,11 @@ const ListClientePage = () => {
     fetchClients();
     setIsModalOpen(false);
     notify();
+  };
+
+  // Limpa a seleção manualmente
+  const handleClearSelection = () => {
+    setClearSelection(true);
   };
 
   return (
@@ -58,6 +65,7 @@ const ListClientePage = () => {
         columns={columns}
         data={clients}
         onSelectedRowsChange={handleRowSelection}
+        clearSelectedRows={clearSelection}
       />
 
       <div className="flex justify-start items-center space-x-5 mt-5 ml-5">
@@ -80,6 +88,14 @@ const ListClientePage = () => {
         >
           <span>Deletar Cliente</span>
           <FaUserTimes />
+        </button>
+
+        <button
+          type="button"
+          onClick={handleClearSelection}
+          className="px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 flex items-center space-x-2"
+        >
+          <span>Limpar Seleção</span>
         </button>
       </div>
 

@@ -12,11 +12,12 @@ export const clienteService = {
 
   async deleteClient(id) {
     const { baseUrl } = useEnv();
-    const response = await fetch(`${baseUrl}/cliente/delete/${id}`, {
+    const response = await fetch(`${baseUrl}/cliente/${id}`, {
       method: "DELETE",
     });
-    if (!response.ok) throw new Error("Falha ao deletar client");
+    if (!response.ok) throw new Error("Falha ao deletar cliente");
   },
+
   async createClient(clientData) {
     const { baseUrl } = useEnv();
 

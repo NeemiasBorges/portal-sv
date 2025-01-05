@@ -5,6 +5,7 @@ export const useClientManagement = () => {
   const [clients, setClients] = useState([]);
   const [selectedRows, setSelectedRows] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [clearSelection, setClearSelection] = useState(false);
 
   const fetchClients = useCallback(async () => {
     try {
@@ -24,13 +25,12 @@ export const useClientManagement = () => {
 
     setIsLoading(true);
     try {
-      console.log(selectedRows);
-      console.log("selectedRows[0].Id", selectedRows[0].id);
       await clienteService.deleteClient(selectedRows[0].id);
       await fetchClients();
       setSelectedRows([]);
+      setClearSelection(true);
     } catch (error) {
-      console.error("Error deleting client:", error);
+      console.error("Error ao deletar o cliente:", error);
     } finally {
       setIsLoading(false);
     }
@@ -38,12 +38,15 @@ export const useClientManagement = () => {
 
   const handleRowSelection = ({ selectedRows }) => {
     setSelectedRows(selectedRows);
+    setClearSelection(false);
   };
 
   return {
     clients,
     selectedRows,
     isLoading,
+    clearSelection,
+    setClearSelection,
     handleDelete,
     handleRowSelection,
     fetchClients,
