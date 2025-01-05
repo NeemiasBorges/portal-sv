@@ -24,7 +24,6 @@ namespace Infra.Utils
 
             Dictionary<string, DestinoInfo> destinos = new Dictionary<string, DestinoInfo>();
 
-            // Download do conteúdo do blob
             var response = await blobClient.DownloadAsync();
             using var streamReader = new StreamReader(response.Value.Content);
             var content = await streamReader.ReadToEndAsync();

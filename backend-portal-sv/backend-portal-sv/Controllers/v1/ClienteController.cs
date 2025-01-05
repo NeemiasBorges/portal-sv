@@ -36,6 +36,7 @@ public class ClienteController : ControllerBase
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     [ProducesResponseType(StatusCodes.Status500InternalServerError)]
     public async Task<IActionResult> GetAllClientes(int numero_pagina, int quantidade_p_pagina)
+    
     {
         try
         {

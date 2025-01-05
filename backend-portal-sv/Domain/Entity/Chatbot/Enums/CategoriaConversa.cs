@@ -11,7 +11,8 @@
         DuvidasSobreDestinos,        
         PromocoesEDescontos,         
         ProblemasTecnicos,           
-        EsclarecimentoDeTermos       
+        EsclarecimentoDeTermos,
+        Outros
     }
 
 }

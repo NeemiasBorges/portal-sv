@@ -1,4 +1,5 @@
-﻿using Services.Services.DTO.Chatbot;
+﻿using Domain.Entity.Chatbot.Enums;
+using Services.Services.DTO.Chatbot;
 
 namespace Services.Services.Chatbot.Interface
 {
@@ -8,5 +9,7 @@ namespace Services.Services.Chatbot.Interface
         Task CriaHistorico(ChatDTO chat);
         Task AtualizaHistorico(ChatDTO chat);
         Task<List<ChatDTO>> PegaHistoricos();
+        Task<CategoriaConversa> validateCategoria(string resumoConversa);
+
     }
 }

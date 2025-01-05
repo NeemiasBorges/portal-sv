@@ -60,7 +60,7 @@ namespace backend_portal_sv.Controllers.v1
             try
             {
                 await _chatbotService.CriaHistorico(chat);
-                return Ok();
+                return Ok(); 
             }
             catch (Exception e)
             {

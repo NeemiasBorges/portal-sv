@@ -5,13 +5,13 @@ namespace Services.Services.DTO.Chatbot
 {
     public class ChatDTO
     {
-        public int Id { get; set; }
-        public DateTime DataMensagem { get; set; }
+        public Guid Id { get; set; }
+        public DateTime DataMensagem { get; set; } = DateTime.Now;
         public string ResumoConversa { get; set; }
         public bool ConversaConcluida { get; set; }
         public string EmailCliente { get; set; }
-        public CategoriaConversa Categoria { get; set; }
-        public string Satisfacao { get; set; }
+        public CategoriaConversa Categoria { get; set; } = CategoriaConversa.Outros;
+        public string? Satisfacao { get; set; }
 
         public ChatDTO() { }
         public ChatDTO(Chat chatEntity) {
@@ -24,7 +24,7 @@ namespace Services.Services.DTO.Chatbot
                           chatEntity.Satisfacao);
         }
 
-        public ChatDTO(int id, DateTime dataMensagem, string resumoConversa, bool conversaConcluida, string emailCliente, CategoriaConversa categoria, string satisfacao)
+        public ChatDTO(Guid id, DateTime dataMensagem, string resumoConversa, bool conversaConcluida, string emailCliente, CategoriaConversa categoria, string satisfacao)
         {
             Id = id;
             DataMensagem = dataMensagem;

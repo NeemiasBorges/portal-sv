@@ -13,6 +13,8 @@ C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend
 C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\bin\Debug\net8.0\Asp.Versioning.Mvc.ApiExplorer.dll
 C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\bin\Debug\net8.0\Azure.Core.dll
 C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\bin\Debug\net8.0\Azure.Identity.dll
+C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\bin\Debug\net8.0\Azure.Storage.Blobs.dll
+C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\bin\Debug\net8.0\Azure.Storage.Common.dll
 C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
@@ -53,6 +55,7 @@ C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend
 C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\bin\Debug\net8.0\System.Drawing.Common.dll
 C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\bin\Debug\net8.0\System.Formats.Asn1.dll
 C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\bin\Debug\net8.0\System.IO.Hashing.dll
 C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\bin\Debug\net8.0\System.IO.Pipelines.dll
 C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\bin\Debug\net8.0\System.Memory.Data.dll
 C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\bin\Debug\net8.0\System.Runtime.Caching.dll
@@ -106,6 +109,3 @@ C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend
 C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\obj\Debug\net8.0\backend-portal-sv.pdb
 C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\obj\Debug\net8.0\backend-portal-sv.genruntimeconfig.cache
 C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\obj\Debug\net8.0\ref\backend-portal-sv.dll
-C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\bin\Debug\net8.0\Azure.Storage.Blobs.dll
-C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\bin\Debug\net8.0\Azure.Storage.Common.dll
-C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\bin\Debug\net8.0\System.IO.Hashing.dll

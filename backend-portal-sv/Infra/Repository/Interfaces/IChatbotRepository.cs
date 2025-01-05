@@ -4,12 +4,14 @@ namespace Infra.Repository.Interfaces
 {
     public interface IChatbotRepository
     {
-        Task<string> SendMessage(string message);
-        Task<string> CreatePrompt(string userMessage);
+        Task ConfigureHttpClient();
+        Task<string> SendMessageAsync(string userMessage);
+        Task<string> CreateChatPrompt(string userMessage, string destinationPrices);
         Task<object> CreateRequestPayload(string prompt);
-        Task<string> ResponseHandler(HttpResponseMessage response);
+        Task<string> HandleResponseAsync(HttpResponseMessage response);
         Task CriaHistorico(Chat chat);
         Task AtualizaHistorico(Chat chat);
         Task<List<Chat>> PegaHistoricos();
+        Task<int> validaCategoriaComLLM(string conversationSummary);
     }
 }
