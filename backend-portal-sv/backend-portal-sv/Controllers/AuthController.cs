@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity.Data;
+using Microsoft.AspNetCore.Mvc;
 using Services.Services.DTO.Cliente;
 using Services.Services.Interfaces;
 
@@ -35,9 +36,9 @@ namespace backend_portal_sv.Controllers
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public IActionResult Auth(string username, string password)
+        public IActionResult Auth([FromBody] LoginRequest request)
         {
-            if (username == "admin" && password == "admin")
+            if (request.Email == "admin@admin.com" && request.Password == "admin")
             {
                 var token = _tokenService.GenerateToken(new ClienteDTO());
                 return Ok(new { token });

@@ -21,22 +21,6 @@
         "summary": "Realiza a autenticação de um usuário e retorna um token JWT caso as credenciais sejam válidas.",
         "parameters": [
           {
-            "name": "username",
-            "in": "query",
-            "description": "Nome de usuário.",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "password",
-            "in": "query",
-            "description": "Senha do usuário.",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "name": "api-version",
             "in": "query",
             "description": "The requested API version",
@@ -47,6 +31,25 @@
             }
           }
         ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "Retorna o token JWT gerado com sucesso."
@@ -547,6 +550,32 @@
           "dataCriacao": {
             "type": "string",
             "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoginRequest": {
+        "required": [
+          "email",
+          "password"
+        ],
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          },
+          "twoFactorCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "twoFactorRecoveryCode": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

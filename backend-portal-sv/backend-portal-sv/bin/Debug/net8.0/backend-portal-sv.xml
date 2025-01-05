@@ -15,7 +15,7 @@
             </summary>
             <param name="tokenService">Serviço responsável pela geração de tokens JWT.</param>
         </member>
-        <member name="M:backend_portal_sv.Controllers.AuthController.Auth(System.String,System.String)">
+        <member name="M:backend_portal_sv.Controllers.AuthController.Auth(Microsoft.AspNetCore.Identity.Data.LoginRequest)">
             <summary>
             Realiza a autenticação de um usuário e retorna um token JWT caso as credenciais sejam válidas.
             </summary>

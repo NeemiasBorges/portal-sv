@@ -11,7 +11,7 @@ const FormField = ({
     <input
       type={type}
       {...register(name, validation)}
-      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+      className="py-2 px-3 mt-1 block w-full border shadow-sm rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
     />
     {errors[name] && (
       <span className="text-red-500 text-sm">{errors[name].message}</span>
