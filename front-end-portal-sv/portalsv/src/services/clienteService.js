@@ -19,17 +19,25 @@ export const clienteService = {
   },
   async createClient(clientData) {
     const { baseUrl } = useEnv();
-    const response = await fetch(`${baseUrl}/cliente`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        ...clientData,
-        DataCriacao: new Date().toISOString(),
-      }),
-    });
-    if (!response.ok) throw new Error("Falha ao criar client");
-    return response.json();
+
+    try {
+      const response = await fetch(`${baseUrl}/cliente`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...clientData,
+          DataCriacao: new Date().toISOString(),
+        }),
+      });
+
+      if (response.status !== 204) {
+        throw new Error(`Falha ao criar cliente. Status: ${response.status}`);
+      }
+    } catch (error) {
+      console.error("Erro na criação do cliente:", error.message);
+      throw error;
+    }
   },
 };

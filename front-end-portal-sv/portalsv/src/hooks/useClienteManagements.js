@@ -24,7 +24,9 @@ export const useClientManagement = () => {
 
     setIsLoading(true);
     try {
-      await clienteService.deleteClient(selectedRows[0].Id);
+      console.log(selectedRows);
+      console.log("selectedRows[0].Id", selectedRows[0].id);
+      await clienteService.deleteClient(selectedRows[0].id);
       await fetchClients();
       setSelectedRows([]);
     } catch (error) {

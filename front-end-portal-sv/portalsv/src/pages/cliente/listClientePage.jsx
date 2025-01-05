@@ -2,13 +2,31 @@ import { useState } from "react";
 import DataTable from "react-data-table-component";
 import { FaUserPlus, FaUserTimes } from "react-icons/fa";
 import { useClientManagement } from "../../hooks/useClienteManagements";
-import Button from "../../components/Form/Botoes/ButtonComponent";
 import ClienteCadastroModal from "../../components/Form/Cliente/ModalCadastro/ModalClienteCadastro";
 import Header from "../../components/Header/HeaderComponent";
 import TitleComponent from "../../components/TitleComponent";
 import { columns } from "../../data/columnsData/clienteColumns";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import WithCustomProgressBar from "../../components/Animated/Toast/WithCustomProgressBar";
 
 const ListClientePage = () => {
+  const notify = () => {
+    toast(
+      ({ closeToast, toastProps }) => (
+        <WithCustomProgressBar
+          closeToast={closeToast}
+          toastProps={toastProps}
+          data={{ message: "Cliente Cadastrado com sucesso" }}
+        />
+      ),
+      {
+        autoClose: 3000, // Tempo de exibição do Toast
+      }
+    );
+  };
+
+  // Hooks do gerenciamento de clientes
   const {
     clients,
     selectedRows,
@@ -19,6 +37,12 @@ const ListClientePage = () => {
   } = useClientManagement();
 
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleSuccess = () => {
+    fetchClients();
+    setIsModalOpen(false);
+    notify();
+  };
 
   return (
     <div>
@@ -62,11 +86,10 @@ const ListClientePage = () => {
       <ClienteCadastroModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
-        onSuccess={() => {
-          fetchClients();
-          setIsModalOpen(false);
-        }}
+        onSuccess={handleSuccess}
       />
+
+      <ToastContainer />
     </div>
   );
 };

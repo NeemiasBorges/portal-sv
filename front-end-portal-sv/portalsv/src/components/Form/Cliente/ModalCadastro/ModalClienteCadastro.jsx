@@ -22,7 +22,7 @@ const ClienteCadastroModal = ({ isOpen, onClose, onSuccess }) => {
     setIsLoading(true);
     try {
       await clienteService.createClient(data);
-      reset();
+      // reset();
       onSuccess();
     } catch (error) {
       console.error("Erro ao criar cliente:", error);
