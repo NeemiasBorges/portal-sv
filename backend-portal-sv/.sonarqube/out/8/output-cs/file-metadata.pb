@@ -1,0 +1,12 @@
+∞
+§C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\obj\Debug\net8.0\API.backend-portal-sv.MvcApplicationPartsAssemblyInfo.csutf-8ù
+ëC:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\obj\Debug\net8.0\API.backend-portal-sv.AssemblyInfo.csutf-8¶
+öC:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\obj\Debug\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.csutf-8ü
+ìC:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\obj\Debug\net8.0\API.backend-portal-sv.GlobalUsings.g.csutf-8ä
+ÄC:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\SwaggerConfig\SwaggerDefaultValues.csutf-8ê
+ÜC:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\SwaggerConfig\ConfigureSwaggerGenOptions.csutf-8u
+eC:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\Program.cswindows-1252á
+~C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\Controllers\v1\ChatbotController.csutf-8á
+~C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\Controllers\v1\ClienteController.csutf-8Ç
+yC:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\Controllers\ThrowController.csutf-8Å
+xC:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\Controllers\AuthController.csutf-8

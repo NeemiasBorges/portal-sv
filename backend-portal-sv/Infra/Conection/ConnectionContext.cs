@@ -7,13 +7,19 @@ namespace Infra.Conection
 {
     public class ConnectionContext : DbContext
     {
+        private readonly IConfiguration _configuration;
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Chat> Chat { get; set; }
+        public ConnectionContext(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Data Source=DEVNEMO;Initial Catalog=PORTALSV;User ID=protheus2024;Password=123456;Encrypt=False");
+                string strConexao = _configuration.GetConnectionString("DefaultConnection") ?? "";
+                optionsBuilder.UseSqlServer(strConexao);
             }
         }
     }

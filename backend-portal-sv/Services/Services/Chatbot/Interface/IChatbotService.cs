@@ -6,9 +6,9 @@ namespace Services.Services.Chatbot.Interface
     public interface IChatbotService
     {
         Task<string> SendMessage(string message);
-        Task CriaHistorico(ChatDTO chat);
-        Task AtualizaHistorico(ChatDTO chat);
-        Task<List<ChatDTO>> PegaHistoricos();
+        Task CriaHistorico(ChatDto chat);
+        Task AtualizaHistorico(ChatDto chat);
+        Task<List<ChatDto>> PegaHistoricos();
         Task<CategoriaConversa> validateCategoria(string resumoConversa);
 
     }

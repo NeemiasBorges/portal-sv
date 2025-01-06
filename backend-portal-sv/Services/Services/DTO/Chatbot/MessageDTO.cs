@@ -3,10 +3,9 @@ namespace Services.Services.DTO.Chatbot
 {
     public class MessageDTO
     {
+        public string? role { get; set; }
+        public string? content { get; set; }
         public MessageDTO() {}
-        public string role { get; set; }
-        public string content { get; set; }
-
         public MessageDTO(string role, string content)
         {
             this.role = role ?? throw new ArgumentNullException(nameof(role));

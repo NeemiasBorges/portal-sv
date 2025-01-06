@@ -101,7 +101,6 @@ C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend
 C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.API.backend-portal-sv.props
 C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.API.backend-portal-sv.props
 C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\obj\Debug\net8.0\API.back.D4B61508.Up2Date
 C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\obj\Debug\net8.0\API.backend-portal-sv.dll
 C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\obj\Debug\net8.0\refint\API.backend-portal-sv.dll

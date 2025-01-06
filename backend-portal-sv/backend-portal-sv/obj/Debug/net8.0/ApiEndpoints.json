@@ -179,7 +179,7 @@
     ]
   },
   {
-    "ContainingType": "ClienteController",
+    "ContainingType": "backend_portal_sv.Controllers.v1.ClienteController",
     "Method": "Create",
     "RelativePath": "api/v1/cliente",
     "HttpMethod": "POST",
@@ -216,7 +216,7 @@
     ]
   },
   {
-    "ContainingType": "ClienteController",
+    "ContainingType": "backend_portal_sv.Controllers.v1.ClienteController",
     "Method": "GetAllClientes",
     "RelativePath": "api/v1/cliente",
     "HttpMethod": "GET",
@@ -258,7 +258,7 @@
     ]
   },
   {
-    "ContainingType": "ClienteController",
+    "ContainingType": "backend_portal_sv.Controllers.v1.ClienteController",
     "Method": "UpdateCliente",
     "RelativePath": "api/v1/cliente",
     "HttpMethod": "PATCH",
@@ -302,7 +302,7 @@
     ]
   },
   {
-    "ContainingType": "ClienteController",
+    "ContainingType": "backend_portal_sv.Controllers.v1.ClienteController",
     "Method": "GetClienteById",
     "RelativePath": "api/v1/cliente/{id}",
     "HttpMethod": "GET",
@@ -346,7 +346,7 @@
     ]
   },
   {
-    "ContainingType": "ClienteController",
+    "ContainingType": "backend_portal_sv.Controllers.v1.ClienteController",
     "Method": "DeleteCliente",
     "RelativePath": "api/v1/cliente/{id}",
     "HttpMethod": "DELETE",

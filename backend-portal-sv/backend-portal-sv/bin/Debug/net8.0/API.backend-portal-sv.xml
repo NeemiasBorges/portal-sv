@@ -19,8 +19,7 @@
             <summary>
             Realiza a autenticação de um usuário e retorna um token JWT caso as credenciais sejam válidas.
             </summary>
-            <param name="username">Nome de usuário.</param>
-            <param name="password">Senha do usuário.</param>
+            <param name="request">Dados de login no body.</param>
             <returns>Token JWT em caso de sucesso ou mensagem de erro em caso de falha.</returns>
             <response code="200">Retorna o token JWT gerado com sucesso.</response>
             <response code="400">Usuário ou senha inválidos.</response>
@@ -40,7 +39,7 @@
             <response code="401">Usuário não autenticado.</response>
             <response code="500">Erro interno do servidor.</response>
         </member>
-        <member name="M:backend_portal_sv.Controllers.v1.ChatbotController.CriaHistorico(Services.Services.DTO.Chatbot.ChatDTO)">
+        <member name="M:backend_portal_sv.Controllers.v1.ChatbotController.CriaHistorico(Services.Services.DTO.Chatbot.ChatDto)">
             <summary>
             Cria o hístorico da conversa no banco de dados
             </summary>
@@ -49,7 +48,7 @@
             <response code="401">Usuário não autenticado.</response>
             <response code="500">Erro interno do servidor.</response>
         </member>
-        <member name="M:backend_portal_sv.Controllers.v1.ChatbotController.AtualizaHistorico(Services.Services.DTO.Chatbot.ChatDTO)">
+        <member name="M:backend_portal_sv.Controllers.v1.ChatbotController.AtualizaHistorico(Services.Services.DTO.Chatbot.ChatDto)">
             <summary>
             Atualiza o hístorico da conversa no banco de dados
             </summary>
@@ -67,13 +66,13 @@
             <response code="401">Usuário não autenticado.</response>
             <response code="500">Erro interno do servidor.</response>
         </member>
-        <member name="M:ClienteController.#ctor(Services.Services.Cliente.Interfaces.IClienteService)">
+        <member name="M:backend_portal_sv.Controllers.v1.ClienteController.#ctor(Services.Services.Cliente.Interfaces.IClienteService)">
             <summary>
             Inicializa o ClienteController com o serviço de cliente.
             </summary>
             <param name="clienteService">Serviço responsável pelas operações relacionadas aos clientes.</param>
         </member>
-        <member name="M:ClienteController.Create(Services.Services.DTO.Cliente.ClienteDTO)">
+        <member name="M:backend_portal_sv.Controllers.v1.ClienteController.Create(Services.Services.DTO.Cliente.ClienteDTO)">
             <summary>
             Cadastra um novo cliente a base de dados. 
             Este endpoint requer autenticação.
@@ -83,7 +82,7 @@
             <response code="401">Usuário não autenticado.</response>
             <response code="500">Erro interno do servidor.</response>
         </member>
-        <member name="M:ClienteController.GetAllClientes(System.Int32,System.Int32)">
+        <member name="M:backend_portal_sv.Controllers.v1.ClienteController.GetAllClientes(System.Int32,System.Int32)">
             <summary>
             Retorna todos os clientes cadastrados. 
             Este endpoint requer autenticação.
@@ -93,7 +92,7 @@
             <response code="401">Usuário não autenticado.</response>
             <response code="500">Erro interno do servidor.</response>
         </member>
-        <member name="M:ClienteController.GetClienteById(System.Int32)">
+        <member name="M:backend_portal_sv.Controllers.v1.ClienteController.GetClienteById(System.Int32)">
             <summary>
             Retorna um cliente específico pelo ID. 
             Este endpoint requer autenticação.
@@ -105,7 +104,7 @@
             <response code="404">Cliente não encontrado.</response>
             <response code="500">Erro interno do servidor.</response>
         </member>
-        <member name="M:ClienteController.UpdateCliente(Services.Services.DTO.Cliente.ClienteDTO)">
+        <member name="M:backend_portal_sv.Controllers.v1.ClienteController.UpdateCliente(Services.Services.DTO.Cliente.ClienteDTO)">
             <summary>
             Atualiza os dados de um cliente existente. 
             Este endpoint requer autenticação.
@@ -116,7 +115,7 @@
             <response code="404">Cliente não encontrado.</response>
             <response code="500">Erro interno do servidor.</response>
         </member>
-        <member name="M:ClienteController.DeleteCliente(System.Int32)">
+        <member name="M:backend_portal_sv.Controllers.v1.ClienteController.DeleteCliente(System.Int32)">
             <summary>
             Deleta um cliente específico pelo ID. 
             Este endpoint requer autenticação.

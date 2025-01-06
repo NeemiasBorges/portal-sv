@@ -22,7 +22,6 @@ namespace Test.Domain
             DataCriacao = DateTime.Now
         };
 
-
         /// <summary>
         /// ClienteDTO Dados validos deve passar validacao
         /// </summary>

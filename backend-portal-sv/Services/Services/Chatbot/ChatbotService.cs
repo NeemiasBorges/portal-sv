@@ -16,7 +16,7 @@ namespace Services.Services.Chatbot
             _chatbotRepository = chatbotRepository ?? throw new ArgumentNullException(nameof(chatbotRepository));
         }
 
-        public async Task AtualizaHistorico(ChatDTO chat)
+        public async Task AtualizaHistorico(ChatDto chat)
         {
             try
             {
@@ -24,24 +24,24 @@ namespace Services.Services.Chatbot
             }
             catch (Exception e)
             {
-                _logger.Error("Erro ao atualizar histórico", e);
+                _logger.Error(e, "Erro ao atualizar histórico para o chat com ID {ChatId}", chat.Id);
                 throw;
             }
         }
 
-        public async Task CriaHistorico(ChatDTO chat)
+        public async Task CriaHistorico(ChatDto chat)
         {
             try
             {
                 var chatEntity = chat.ToEntity();
                 await _chatbotRepository.CriaHistorico(chatEntity);
 
-                chatEntity.AtualizarCategoria(await validateCategoria(chat.ResumoConversa));
+                chatEntity.AtualizarCategoria(await validateCategoria(chat.ResumoConversa ?? ""));
                 await _chatbotRepository.AtualizaHistorico(chatEntity);
             }
             catch (Exception e)
             {
-                _logger.Error("Erro ao criar histórico", e);
+                _logger.Error(e, "Erro ao criar histórico para o chat com ID {ChatId}", chat.ToEntity());
                 throw; 
             }
         }
@@ -50,30 +50,33 @@ namespace Services.Services.Chatbot
         {
             try
             {
+                if (String.IsNullOrEmpty(resumoConversa))
+                    throw new ArgumentNullException(nameof(resumoConversa), "O resumo da conversa não pode ser nulo ou vazio.");
+
                 return (CategoriaConversa)await _chatbotRepository.validaCategoriaComLLM(resumoConversa);
             }
             catch (Exception e)
             {
-                _logger.Error("Erro ao validar categoria", e);
+                _logger.Error(e, "Erro ao validar categoria para o resumo: {ResumoConversa}", resumoConversa);
                 throw;
             }
         }
 
-        public async Task<List<ChatDTO>> PegaHistoricos()
+        public async Task<List<ChatDto>> PegaHistoricos()
         {
             try
             {
-                var chatlist = new List<ChatDTO>();
+                var chatlist = new List<ChatDto>();
                 var listChatEntity = await _chatbotRepository.PegaHistoricos();
                 foreach (var item in listChatEntity)
-                    chatlist.Add(new ChatDTO(item));
+                    chatlist.Add(new ChatDto(item));
 
                 return chatlist;
 
             }
             catch (Exception e)
             {
-                _logger.Error("Erro ao pegar todos os hístoricos", e);
+                _logger.Error(e, "Erro ao pegar todos os históricos.");
                 throw;
             }
         }
@@ -88,7 +91,7 @@ namespace Services.Services.Chatbot
             catch (Exception e)
             {
 
-                _logger.Error("Erro ao enviar mensagem ao LLM", e);
+                _logger.Error(e, "Erro ao enviar mensagem ao LLM: {Mensagem}", message);
                 throw;
             }
         }

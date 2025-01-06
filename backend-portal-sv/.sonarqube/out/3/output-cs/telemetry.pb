@@ -1,0 +1,1 @@
+pRZC:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\Teste\Test.csproj¢net8.0òCSharp12

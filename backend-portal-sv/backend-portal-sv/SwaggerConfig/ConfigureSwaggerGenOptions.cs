@@ -31,12 +31,12 @@ namespace backend_portal_sv.SwaggerConfig
                 Description = "API destinada ao portal de seguros de viagens, oferecendo integração com diversos serviços relacionados a seguros para viagens nacionais/internacionais.",
                 Contact = new OpenApiContact
                 {
-                    Name = "APISV",
+                    Name = "API - Seguro de Viagens",
                     Email = "neemiasb.dev@gmail.com"
                 },
                 License = new OpenApiLicense
                 {
-                    Name = "Licenca -> Teste Técnico - API"
+                    Name = "Licença -> Teste Técnico - API Seguro de Viagens"
                 }
             };
         }

@@ -1,0 +1,1 @@
+wRaC:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\Services\Services.csproj¢net8.0òCSharp12

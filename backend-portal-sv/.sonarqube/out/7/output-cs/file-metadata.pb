@@ -1,0 +1,9 @@
+
+tC:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\Teste\obj\Debug\net8.0\Test.AssemblyInfo.csutf-8ö
+éC:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\Teste\obj\Debug\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.csutf-8Å
+vC:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\Teste\obj\Debug\net8.0\Test.GlobalUsings.g.csutf-8}
+rC:\Users\ifspn\.nuget\packages\microsoft.net.test.sdk\17.8.0\build\netcoreapp3.1\Microsoft.NET.Test.Sdk.Program.csutf-8m
+dC:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\Teste\DTO\ClienteDTOTest.csutf-8j
+aC:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\Teste\DTO\ChatDTOTest.csutf-8s
+jC:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\Teste\Domain\ClienteDomainTest.csutf-8p
+gC:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\Teste\Domain\ChatDomainTest.csutf-8

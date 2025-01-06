@@ -3,18 +3,18 @@ using Domain.Entity.Chatbot.Enums;
 
 namespace Services.Services.DTO.Chatbot
 {
-    public class ChatDTO
+    public class ChatDto
     {
         public Guid Id { get; set; }
         public DateTime DataMensagem { get; set; } = DateTime.Now;
-        public string ResumoConversa { get; set; }
+        public string? ResumoConversa { get; set; } 
         public bool ConversaConcluida { get; set; }
-        public string EmailCliente { get; set; }
+        public string? EmailCliente { get; set; }
         public CategoriaConversa Categoria { get; set; } = CategoriaConversa.Outros;
         public string? Satisfacao { get; set; }
 
-        public ChatDTO() { }
-        public ChatDTO(Chat chatEntity) {
+        public ChatDto() { }
+        public ChatDto(Chat chatEntity) {
 
 
             if (chatEntity == null)
@@ -29,7 +29,7 @@ namespace Services.Services.DTO.Chatbot
             this.Satisfacao  = chatEntity.Satisfacao;
         }
 
-        public ChatDTO(Guid id, DateTime dataMensagem, string resumoConversa, bool conversaConcluida, string emailCliente, CategoriaConversa categoria, string satisfacao)
+        public ChatDto(Guid id, DateTime dataMensagem, string resumoConversa, bool conversaConcluida, string emailCliente, CategoriaConversa categoria, string satisfacao)
         {
             Id = id;
             DataMensagem = dataMensagem;
@@ -45,11 +45,11 @@ namespace Services.Services.DTO.Chatbot
         {
             return new Chat(this.Id,
                 this.DataMensagem,
-                this.ResumoConversa,
+                this.ResumoConversa ?? "",
                 this.ConversaConcluida,
-                this.EmailCliente,
+                this.EmailCliente ?? "",
                 this.Categoria,
-                this.Satisfacao);
+                this.Satisfacao ?? "");
         }
     }
 }

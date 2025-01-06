@@ -1,6 +1,7 @@
 ﻿using Azure.Storage.Blobs;
 using Domain.Entity.Viagem;
 using Microsoft.Extensions.Configuration;
+using System.Text;
 
 namespace Infra.Utils
 {
@@ -12,8 +13,8 @@ namespace Infra.Utils
 
         public StorageHandler(IConfiguration conf)
         {
-            _connectionString = conf["AzureStorage:ConnectionString"];
-            _containerName = conf["AzureStorage:ContainerName"];
+            _connectionString = conf["AzureStorage:ConnectionString"] ?? "";
+            _containerName = conf["AzureStorage:ContainerName"] ?? "";
             _blobName = conf["AzureStorage:BlobName"] ?? "destinos.md";
         }
 
@@ -36,28 +37,30 @@ namespace Infra.Utils
                     .ToArray();
 
                 if (partes.Length == 0)
+                {
                     continue;
-
-                    string nome = partes[0];
-                    if (decimal.TryParse(partes[1], out var precoPorPessoa) &&
-                        decimal.TryParse(partes[2], out var multiplicadorFamilia) &&
-                        decimal.TryParse(partes[3], out var multiplicadorIdade) &&
-                        decimal.TryParse(partes[4], out var multiplicadorSaude))
-                    {
-                        destinos[nome] = new DestinoInfo(
-                            precoPorPessoa,
-                            multiplicadorFamilia,
-                            multiplicadorIdade,
-                            multiplicadorSaude
-                        );
-                    }
+                }
+                
+                string nome = partes[0];
+                if (decimal.TryParse(partes[1], out var precoPorPessoa) &&
+                    decimal.TryParse(partes[2], out var multiplicadorFamilia) &&
+                    decimal.TryParse(partes[3], out var multiplicadorIdade) &&
+                    decimal.TryParse(partes[4], out var multiplicadorSaude))
+                {
+                    destinos[nome] = new DestinoInfo(
+                        precoPorPessoa,
+                        multiplicadorFamilia,
+                        multiplicadorIdade,
+                        multiplicadorSaude
+                    );
+                }
             }
             return destinos;
         }
 
         public async Task<string> GetPrecosParaTodosDestinosAsync()
         {
-            string context = string.Empty;
+            StringBuilder context = new StringBuilder();
             var destinos = await LerDestinosDoArquivoAsync(string.Empty);
 
             if (destinos == null || destinos.Count == 0)
@@ -67,11 +70,10 @@ namespace Infra.Utils
             {
                 var nomeDestino = destino.Key;
                 var destinoInfo = destino.Value;
-                var precoTotal = destinoInfo.PrecoPorPessoa;
-                context += $"- Destino: {nomeDestino}\n";
-                context += $"  Preço por pessoa: R$ {destinoInfo.PrecoPorPessoa:F2}\n";
+                context.Append($"- Destino: {nomeDestino} \n");
+                context.Append($"  Preço por pessoa: R$ {destinoInfo.PrecoPorPessoa:F2} \n");
             }
-            return context;
+            return context.ToString();
         }
     }
 }

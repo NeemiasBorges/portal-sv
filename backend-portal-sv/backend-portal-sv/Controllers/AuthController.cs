@@ -28,8 +28,7 @@ namespace backend_portal_sv.Controllers
         /// <summary>
         /// Realiza a autenticação de um usuário e retorna um token JWT caso as credenciais sejam válidas.
         /// </summary>
-        /// <param name="username">Nome de usuário.</param>
-        /// <param name="password">Senha do usuário.</param>
+        /// <param name="request">Dados de login no body.</param>
         /// <returns>Token JWT em caso de sucesso ou mensagem de erro em caso de falha.</returns>
         /// <response code="200">Retorna o token JWT gerado com sucesso.</response>
         /// <response code="400">Usuário ou senha inválidos.</response>
@@ -44,8 +43,7 @@ namespace backend_portal_sv.Controllers
                 return Ok(new { token });
             }
 
-            //TODO:Asp linhás 41,42,43 e 44 apenas refletem um comportamento que nao é indicado, acabei deixando o login fixo pois a titulo de demonstração, mas o correto seria buscar essas informações no banco de dados.
-
+            //TODO:Asplinhas 41,42,43 e 44 apenas refletem um comportamento que nao é indicado, acabei deixando o login fixo pois a titulo de demonstração, mas o correto seria buscar essas informações no banco de dados.
 
             return BadRequest("Usuário ou senha inválidos.");
         }

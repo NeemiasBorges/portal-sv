@@ -13,6 +13,11 @@ namespace backend_portal_sv.Controllers
         public IActionResult HandleErrorDevelopment(
             [FromServices] IHostEnvironment hostEnviroment)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
             if (!hostEnviroment.IsDevelopment())
             {
                 return NotFound();

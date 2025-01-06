@@ -8,11 +8,11 @@ namespace Services.Services.Cliente
     public class ClienteService : IClienteService
     {
         private readonly IClienteRepository _clienteRepository;
-        private readonly ILogger _logs;
+        private readonly ILogger _logger;
         public ClienteService(IClienteRepository clienteRepository, ILogger logs)
         {
             _clienteRepository = clienteRepository ?? throw new ArgumentNullException(nameof(clienteRepository));
-            _logs = logs ?? throw new ArgumentNullException(nameof(logs));
+            _logger = logs ?? throw new ArgumentNullException(nameof(logs));
         }
 
         public async Task Add(ClienteDTO cliente)
@@ -20,12 +20,12 @@ namespace Services.Services.Cliente
             try
             {
                 await _clienteRepository.Add(cliente.ToEntity());
-                _logs.Information("Cliente: '{cliente}' - adicionado com sucesso", cliente.Nome);
+                _logger.Information("Cliente: '{Cliente}' - Adicionado Com Sucesso", cliente.Nome);
             }
             catch (Exception e)
             {
-                _logs.Error(e.Message);
-                throw new Exception(e.Message);
+                _logger.Error(e.Message, e, "Erro ao add Cliente - Message: {Message} ,{Error}");
+                throw;
             }
         }
 
@@ -34,12 +34,12 @@ namespace Services.Services.Cliente
             try
             {
                 await _clienteRepository.Delete(cliente.ToEntity());
-                _logs.Information("Cliente: '{cliente}' - deletado com sucesso", cliente.Nome);
+                _logger.Information("Cliente: '{Cliente}' - Deletado com Sucesso", cliente.Nome);
             }
             catch (Exception e)
             {
-                _logs.Error(e.Message);
-                throw new Exception(e.Message);
+                _logger.Error(e.Message, e, "Erro Ao deletar o Cliente - Message: {Message} ,{Error}");
+                throw;
             }
         }
 
@@ -52,8 +52,8 @@ namespace Services.Services.Cliente
             }
             catch (Exception e)
             {
-                _logs.Error(e.Message);
-                throw new Exception(e.Message);
+                _logger.Error(e.Message, e, "Erro Ao Pegar o Cliente - Message: {Message} ,{Error}");
+                throw;
             }
         }
 
@@ -66,8 +66,8 @@ namespace Services.Services.Cliente
             }
             catch (Exception e)
             {
-                _logs.Error(e.Message);
-                throw new Exception(e.Message);
+                _logger.Error(e.Message, e, "Erro Ao Pegar Todos Os Clientes - Message: {Message} ,{Error}");
+                throw;
             }
         }
 
@@ -76,12 +76,12 @@ namespace Services.Services.Cliente
             try
             {
                 await _clienteRepository.Update(cliente.ToEntity());
-                _logs.Information("Cliente: '{cliente}' - atualizado com sucesso", cliente.Nome);
+                _logger.Information("Cliente: '{Cliente}' - Atualizado Com Sucesso", cliente.Nome);
             }
             catch (Exception e)
             {
-                _logs.Error(e.Message);
-                throw new Exception(e.Message);
+                _logger.Error(e.Message, e, "Erro Ao Atualizar o Cliente - Message: {Message} ,{Error}");
+                throw;
             }
         }
     }

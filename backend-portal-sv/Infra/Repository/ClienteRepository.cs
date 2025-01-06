@@ -30,7 +30,12 @@ namespace Infra.Repository
 
         public async Task<Cliente> Get(int id)
         {
-            return await _context.Clientes.FindAsync(id);
+            var cliente = await _context.Clientes.FindAsync(id);
+            if (cliente == null)
+            {
+                throw new KeyNotFoundException($"Cliente com ID {id} não foi encontrado.");
+            }
+            return cliente;
         }
 
         public async Task<List<Cliente>> GetAll(int numero_pagina, int quantidade_p_pagina)

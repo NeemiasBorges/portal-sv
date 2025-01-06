@@ -1,8 +1,8 @@
 ﻿using Asp.Versioning;
-using Domain.Entity;
 using Microsoft.AspNetCore.Mvc;
 using Services.Services.Chatbot.Interface;
 using Services.Services.DTO.Chatbot;
+using static Domain.Exceptions.Http;
 
 namespace backend_portal_sv.Controllers.v1
 {
@@ -42,6 +42,10 @@ namespace backend_portal_sv.Controllers.v1
                 var returnMessage = await _chatbotService.SendMessage(message);
                 return Ok(returnMessage);
             }
+            catch (HttpResponseException ex)
+            {
+                return StatusCode((int)ex.StatusCode, ex.Message);
+            }
             catch (Exception e)
             {
                 throw;
@@ -61,11 +65,15 @@ namespace backend_portal_sv.Controllers.v1
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> CriaHistorico(ChatDTO chat){
+        public async Task<IActionResult> CriaHistorico(ChatDto chat){
             try
             {
                 await _chatbotService.CriaHistorico(chat);
                 return Created(); 
+            }
+            catch (HttpResponseException ex)
+            {
+                return StatusCode((int)ex.StatusCode, ex.Message);
             }
             catch (Exception e)
             {
@@ -84,11 +92,15 @@ namespace backend_portal_sv.Controllers.v1
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> AtualizaHistorico(ChatDTO chat){
+        public async Task<IActionResult> AtualizaHistorico(ChatDto chat){
             try
             {
                 await _chatbotService.AtualizaHistorico(chat);
                 return NoContent();
+            }
+            catch (HttpResponseException ex)
+            {
+                return StatusCode((int)ex.StatusCode, ex.Message);
             }
             catch (Exception e)
             {
@@ -113,6 +125,10 @@ namespace backend_portal_sv.Controllers.v1
             {
                 var returnMessage = await _chatbotService.PegaHistoricos();
                 return Ok(returnMessage);
+            }
+            catch (HttpResponseException ex)
+            {
+                return StatusCode((int)ex.StatusCode, ex.Message);
             }
             catch (Exception e)
             {

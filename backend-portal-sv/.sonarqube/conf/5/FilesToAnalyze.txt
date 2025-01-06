@@ -1,0 +1,7 @@
+﻿C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\Infra\Conection\ConnectionContext.cs
+C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\Infra\Repository\ChatbotRepository.cs
+C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\Infra\Repository\ClienteRepository.cs
+C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\Infra\Repository\Interfaces\IChatbotRepository.cs
+C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\Infra\Repository\Interfaces\IClienteRepository.cs
+C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\Infra\Utils\Interfaces\IStorageHandler.cs
+C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\Infra\Utils\StorageHandler.cs

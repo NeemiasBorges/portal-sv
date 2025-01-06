@@ -1,0 +1,1 @@
+qR[C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\Infra\Infra.csproj¢net8.0òCSharp12

@@ -20,7 +20,7 @@ namespace Tests.DTO
             var chat = new Chat(Guid.NewGuid(), DateTime.Now, "resumo", true,
                 "email@test.com", CategoriaConversa.AlteracoesNaApolice, "5");
 
-            var dto = new ChatDTO(chat);
+            var dto = new ChatDto(chat);
 
             Assert.Equal(chat.Id, dto.Id);
             Assert.Equal(chat.dataMensagem, dto.DataMensagem);
@@ -33,12 +33,12 @@ namespace Tests.DTO
 
 
         /// <summary>
-        /// Testes para o mapeamento - Entidade deve converter para DTO <see cref="ChatDTO"/>.
+        /// Testes para o mapeamento - Entidade deve converter para DTO <see cref="ChatDto"/>.
         /// </summary>
         [Fact]
-        public void ChatDTO_ConverterParaEntity_DeveMapearCorretamente()
+        public void ChatDto_ConverterParaEntity_DeveMapearCorretamente()
         {
-            var dto = new ChatDTO
+            var dto = new ChatDto
             {
                 Id = Guid.NewGuid(),
                 DataMensagem = DateTime.Now,
@@ -63,7 +63,7 @@ namespace Tests.DTO
         [Fact]
         public void ChatDTO_EntityNula_DeveLancarExcecao()
         {
-            Assert.Throws<ArgumentNullException>(() => new ChatDTO(null));
+            Assert.Throws<ArgumentNullException>(() => new ChatDto(null));
         }
     }
 }

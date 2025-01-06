@@ -7,21 +7,27 @@ namespace Domain.Entity
     [Table("clientes")]
     public class Cliente
     {
-        public Cliente() { }
         [Key]
         public int Id { get; private set; }
-        public string nome { get; private set; }
+        public string? nome { get; private set; }
         [EmailAddress]
-        public string email { get; private set; }
-        public string cpf { get; private set; }
-        public string telefone { get; private set; }
+        public string? email { get; private set; }
+        public string? cpf { get; private set; }
+        public string? telefone { get; private set; }
 
         [AllowedValues("M", "F")]
-        public string sexo { get; private set; }
-        public string cep { get; private set; }
+        public string? sexo { get; private set; }
+        public string? cep { get; private set; }
         public DateTime datacriacao { get; private set; }
-
-        public Cliente(int id, string nome, string email, string cpf, string telefone, string sexo, string cep, DateTime datacriacao)
+        public Cliente() { }
+        public Cliente(int id,
+            string nome,
+            string email,
+            string cpf, 
+            string telefone, 
+            string sexo,
+            string cep,
+            DateTime datacriacao)
         {
             Id = id;
             this.nome = nome ?? throw new ArgumentNullException(nameof(nome));

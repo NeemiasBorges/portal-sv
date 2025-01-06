@@ -1,0 +1,11 @@
+€
+uC:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\Infra\obj\Debug\net8.0\Infra.AssemblyInfo.csutf-8š
+ŽC:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\Infra\obj\Debug\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.csutf-8‚
+wC:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\Infra\obj\Debug\net8.0\Infra.GlobalUsings.g.csutf-8o
+fC:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\Infra\Utils\StorageHandler.csutf-8{
+rC:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\Infra\Utils\Interfaces\IStorageHandler.csutf-8ƒ
+zC:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\Infra\Repository\Interfaces\IClienteRepository.csutf-8ƒ
+zC:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\Infra\Repository\Interfaces\IChatbotRepository.csutf-8w
+nC:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\Infra\Repository\ClienteRepository.csutf-8w
+nC:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\Infra\Repository\ChatbotRepository.csutf-8v
+mC:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\Infra\Conection\ConnectionContext.csutf-8

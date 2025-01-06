@@ -43,18 +43,6 @@ builder.Services.AddScoped<IChatbotService, ChatbotService>();
 builder.Services.AddSingleton<Serilog.ILogger>(new LoggerConfiguration()
     .CreateLogger());
 
-#region CORS
-builder.Services.AddCors(option =>
-{
-    option.AddPolicy("CorsPolicy", builder =>
-    {
-        builder.AllowAnyOrigin()
-            .AllowAnyMethod()
-            .AllowAnyHeader();
-    });
-});
-#endregion
-
 #region API Versioning
 builder.Services.AddApiVersioning().AddMvc().AddApiExplorer(setup =>
 {
@@ -119,7 +107,7 @@ builder.Services.AddAuthentication(x =>
     x.TokenValidationParameters = new TokenValidationParameters
     {
         ValidateIssuerSigningKey = true,
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(builder.Configuration["Jwt:Secret"])),
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(builder.Configuration["Jwt:Secret"] ?? "")),
         ValidateIssuer = false,
         ValidateAudience = false
     };
@@ -155,4 +143,4 @@ app.UseAuthorization();
 app.MapControllers();
 #endregion
 
-app.Run();
+await app.RunAsync();

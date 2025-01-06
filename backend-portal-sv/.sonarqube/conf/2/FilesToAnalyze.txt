@@ -1,0 +1,12 @@
+﻿C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\Services\Services\Chatbot\ChatbotService.cs
+C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\Services\Services\Chatbot\Interface\IChatbotService.cs
+C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\Services\Services\Cliente\ClienteService.cs
+C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\Services\Services\Cliente\Interfaces\IClienteService.cs
+C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\Services\Services\DTO\Chatbot\ChatDto.cs
+C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\Services\Services\DTO\Chatbot\ChoiceDTO.cs
+C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\Services\Services\DTO\Chatbot\MessageDTO.cs
+C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\Services\Services\DTO\Chatbot\ResponseDTO.cs
+C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\Services\Services\DTO\Chatbot\UsageDTO.cs
+C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\Services\Services\DTO\Cliente\ClienteDTO.cs
+C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\Services\Services\Token\Interfaces\ITokenServices.cs
+C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\Services\Services\Token\TokenService.cs
