@@ -1,8 +1,7 @@
-﻿using Infra.Repository;
-using Infra.Repository.Interfaces;
+﻿using Infra.Repository.Interfaces;
+using Serilog;
 using Services.Services.Cliente.Interfaces;
 using Services.Services.DTO.Cliente;
-using Serilog;
 
 namespace Services.Services.Cliente
 {

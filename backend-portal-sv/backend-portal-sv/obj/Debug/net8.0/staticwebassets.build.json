@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "4ROIVux7/kHpQUF5xaG2k8L/lrwgaLyUX54RudTFfTw=",
-  "Source": "backend-portal-sv",
-  "BasePath": "_content/backend-portal-sv",
+  "Hash": "/drjCX4MtqCBD4mVjbZCu8rawriPQ5xZCiaBrcQaeus=",
+  "Source": "API.backend-portal-sv",
+  "BasePath": "_content/API.backend-portal-sv",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

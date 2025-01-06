@@ -2795,6 +2795,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "Domain >= 1.0.0",
       "Infra >= 1.0.0",
       "Microsoft.IdentityModel.Tokens >= 8.3.0",
       "Serilog >= 4.2.0",
@@ -2833,6 +2834,9 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
+            "C:\\Users\\ifspn\\OneDrive\\Desktop\\APPS\\backend-portal-sv\\backend-portal-sv\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\ifspn\\OneDrive\\Desktop\\APPS\\backend-portal-sv\\backend-portal-sv\\Domain\\Domain.csproj"
+            },
             "C:\\Users\\ifspn\\OneDrive\\Desktop\\APPS\\backend-portal-sv\\backend-portal-sv\\Infra\\Infra.csproj": {
               "projectPath": "C:\\Users\\ifspn\\OneDrive\\Desktop\\APPS\\backend-portal-sv\\backend-portal-sv\\Infra\\Infra.csproj"
             }

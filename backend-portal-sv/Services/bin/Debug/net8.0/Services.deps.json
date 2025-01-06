@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v8.0": {
       "Services/1.0.0": {
         "dependencies": {
+          "Domain": "1.0.0",
           "Infra": "1.0.0",
           "Microsoft.IdentityModel.Tokens": "8.3.0",
           "Serilog": "4.2.0",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "G2qg3c5AkH0=",
+  "dgSpecHash": "/ziE7kypGE8=",
   "success": true,
-  "projectFilePath": "C:\\Users\\ifspn\\OneDrive\\Desktop\\APPS\\backend-portal-sv\\backend-portal-sv\\backend-portal-sv\\backend-portal-sv.csproj",
+  "projectFilePath": "C:\\Users\\ifspn\\OneDrive\\Desktop\\APPS\\backend-portal-sv\\backend-portal-sv\\backend-portal-sv\\API.backend-portal-sv.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ifspn\\.nuget\\packages\\asp.versioning.abstractions\\8.1.0\\asp.versioning.abstractions.8.1.0.nupkg.sha512",
     "C:\\Users\\ifspn\\.nuget\\packages\\asp.versioning.http\\8.1.0\\asp.versioning.http.8.1.0.nupkg.sha512",
