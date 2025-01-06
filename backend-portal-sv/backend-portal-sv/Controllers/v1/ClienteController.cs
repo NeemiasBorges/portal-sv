@@ -9,7 +9,6 @@ using Services.Services.DTO.Cliente;
 [Produces("application/json")]
 [Tags("Clientes")]
 [ApiVersion(1.0)]
-//[Authorize]
 public class ClienteController : ControllerBase
 {
     private readonly IClienteService _clienteService;
@@ -31,6 +30,7 @@ public class ClienteController : ControllerBase
     /// <response code="201">Criacao de clientes retorna sucesso.</response>
     /// <response code="401">Usuário não autenticado.</response>
     /// <response code="500">Erro interno do servidor.</response>
+    [Authorize]
     [HttpPost]
     [ProducesResponseType(StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
@@ -115,6 +115,7 @@ public class ClienteController : ControllerBase
     /// <response code="401">Usuário não autenticado.</response>
     /// <response code="404">Cliente não encontrado.</response>
     /// <response code="500">Erro interno do servidor.</response>
+    [Authorize]
     [HttpPatch]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
@@ -146,6 +147,7 @@ public class ClienteController : ControllerBase
     /// <response code="401">Usuário não autenticado.</response>
     /// <response code="404">Cliente não encontrado.</response>
     /// <response code="500">Erro interno do servidor.</response>
+    [Authorize]
     [HttpDelete("{id:int}")]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]

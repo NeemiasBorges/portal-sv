@@ -1,4 +1,5 @@
 import useEnv from "../hooks/useEnv";
+import { toast } from "react-toastify";
 
 export const clienteService = {
   async getClients() {
@@ -14,6 +15,7 @@ export const clienteService = {
     const { baseUrl } = useEnv();
     const response = await fetch(`${baseUrl}/cliente/${id}`, {
       method: "DELETE",
+      credentials: "include",
     });
     if (!response.ok) throw new Error("Falha ao deletar cliente");
   },
@@ -22,6 +24,7 @@ export const clienteService = {
     const { baseUrl } = useEnv();
     const response = await fetch(`${baseUrl}/cliente/${id}`, {
       method: "GET",
+      credentials: "include",
     });
     if (!response.ok) throw new Error("Falha ao pegar o cliente");
   },
@@ -32,6 +35,7 @@ export const clienteService = {
     try {
       const response = await fetch(`${baseUrl}/cliente`, {
         method: "POST",
+        credentials: "include",
         headers: {
           "Content-Type": "application/json",
         },
@@ -45,7 +49,7 @@ export const clienteService = {
         throw new Error(`Falha ao criar cliente. Status: ${response.status}`);
       }
     } catch (error) {
-      console.error("Erro na criação do cliente:", error.message);
+      toast.error(error.message || "Erro na criação do cliente:");
       throw error;
     }
   },
@@ -55,6 +59,7 @@ export const clienteService = {
     try {
       const response = await fetch(`${baseUrl}/cliente`, {
         method: "PATCH",
+        credentials: "include",
         headers: {
           "Content-Type": "application/json",
         },
@@ -64,7 +69,7 @@ export const clienteService = {
         }),
       });
     } catch (error) {
-      console.error("Erro na criação do cliente:", error.message);
+      toast.error(error.message || "Erro na criação do cliente:");
       throw error;
     }
   },

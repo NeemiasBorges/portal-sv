@@ -3,6 +3,6 @@ namespace Services.Services.Interfaces
 {
     public interface ITokenService
     {
-        string GenerateToken(ClienteDTO cliente);
+        Task<string> GenerateToken();
     }
 }

@@ -1,11 +1,9 @@
-﻿using System;
+﻿using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens;
+using Services.Services.Interfaces;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using Microsoft.Extensions.Configuration;
-using Microsoft.IdentityModel.Tokens;
-using Services.Services.DTO.Cliente;
-using Services.Services.Interfaces;
 
 namespace Services.Services
 {
@@ -18,15 +16,16 @@ namespace Services.Services
             _secretKey = configuration["Jwt:Secret"];
         }
 
-        public string GenerateToken(ClienteDTO cliente)
+        public async Task<string> GenerateToken()
         {
             var key = Encoding.ASCII.GetBytes(_secretKey);
             var tokenConfig = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(new[]
                 {
-                    new Claim("clienteid", cliente.Id.ToString()),
+                    new Claim("userid", Guid.NewGuid().ToString()),
                 }),
+
                 Expires = DateTime.UtcNow.AddHours(2),
                 SigningCredentials = new SigningCredentials(
                     new SymmetricSecurityKey(key),

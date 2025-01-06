@@ -36,13 +36,16 @@ namespace backend_portal_sv.Controllers
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public IActionResult Auth([FromBody] LoginRequest request)
+        public async Task<IActionResult> Auth([FromBody] LoginRequest request)
         {
             if (request.Email == "admin@admin.com" && request.Password == "admin")
             {
-                var token = _tokenService.GenerateToken(new ClienteDTO());
+                var token = await _tokenService.GenerateToken();
                 return Ok(new { token });
             }
+
+            //TODO:Asp linhás 41,42,43 e 44 apenas refletem um comportamento que nao é indicado, acabei deixando o login fixo pois a titulo de demonstração, mas o correto seria buscar essas informações no banco de dados.
+
 
             return BadRequest("Usuário ou senha inválidos.");
         }
