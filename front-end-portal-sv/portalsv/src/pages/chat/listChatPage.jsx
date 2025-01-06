@@ -21,20 +21,21 @@ function ListChat() {
   return (
     <div>
       <Header />
-      <DataTable
-        className="p-10 border-solid border-2 border-gray-300 mt-3"
-        title="Conversas"
-        pagination
-        selectableRows
-        columns={columns}
-        data={chats}
-      />
-      <ChatHistoryModal
-        className="p-10"
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        chatData={modalData}
-      />
+      <div className="container shadow-lg max-w-5xl mx-auto p-5 m-5">
+        <DataTable
+          title="Conversas"
+          pagination
+          selectableRows
+          columns={columns}
+          data={chats}
+        />
+        <ChatHistoryModal
+          className="p-10"
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+          chatData={modalData}
+        />
+      </div>
     </div>
   );
 }

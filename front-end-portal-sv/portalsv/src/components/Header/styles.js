@@ -8,8 +8,8 @@ export const Container = styled.div`
   > svg {
     position: fixed;
     color: white;
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     margin-top: 20px;
     margin-left: 20px;
     cursor: pointer;
