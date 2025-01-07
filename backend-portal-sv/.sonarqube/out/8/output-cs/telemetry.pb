@@ -1,1 +1,0 @@
-çRwC:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\backend-portal-sv\API.backend-portal-sv.csproj¢net8.0ÚCSharp12

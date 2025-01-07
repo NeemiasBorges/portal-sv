@@ -1,9 +1,0 @@
-﻿C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\Domain\Entity\Chatbot\Chat.cs
-C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\Domain\Entity\Chatbot\Choice.cs
-C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\Domain\Entity\Chatbot\Enums\CategoriaConversa.cs
-C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\Domain\Entity\Chatbot\Message.cs
-C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\Domain\Entity\Chatbot\Response.cs
-C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\Domain\Entity\Chatbot\Usage.cs
-C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\Domain\Entity\Cliente\Cliente.cs
-C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\Domain\Entity\Viagem\DestinoInfo.cs
-C:\Users\ifspn\OneDrive\Desktop\APPS\backend-portal-sv\backend-portal-sv\Domain\Exceptions\Http.cs
