@@ -1,7 +1,7 @@
 # 🌍 Portal de Seguro Viagem
 
 ## 📝 Visão Geral
-Apresento um portal de seguros de viagem, composta por um backend .NET Core 8.0 e um frontend moderno em React. O sistema oferece funcionalidades CRUD para clientes e um chatbot inteligente baseado em LLM para auxiliar usuários com informações sobre seguros
+Apresento um portal de seguros de viagem, composta por um backend .NET Core 8.0 e um frontend simples em React. O sistema oferece funcionalidades CRUD para clientes e um chatbot inteligente baseado em LLM para auxiliar usuários com informações sobre seguros
 
 # 📊 Status do projeto
 
