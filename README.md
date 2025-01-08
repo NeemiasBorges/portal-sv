@@ -186,11 +186,11 @@ npm run dev
 - Cadastro completo de informações
 ![Cadastro de imagem](https://i.imgur.com/Nz0tUTT.gif)
 - Atualização de dados
-![Atualizacao](blob:https://imgur.com/8a3a18f6-9c28-43e6-b888-e32a8907db46)
+![Atualizacao](https://i.imgur.com/fyrYO92.gif)
 - Consulta e listagem
 ![Consulta e Listagem](https://i.imgur.com/ePAfHGe.gif)
 - Remoção segura de registros
-![Delecao Cliente](blob:https://imgur.com/25a7c9ce-1805-41b2-babf-cfee0af5a19a)
+![Delecao Cliente](https://i.imgur.com/9IxTrcx.gif)
 
 ### Chatbot Inteligente
 - Respostas contextualizadas sobre seguros
