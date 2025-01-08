@@ -80,6 +80,37 @@ Apresento um portal de seguros de viagem, composta por um backend .NET Core 8.0 
 - **Build Tool**: Vite 5.4.1
 - **Estilização**: TailwindCSS 3.4.17
 
+## Documentação do Banco de Dados
+
+#### Entidades
+
+### Chat
+
+| Coluna              | Tipo          | Descrição                                                                 |
+|---------------------|---------------|---------------------------------------------------------------------------|
+| **Id**             | UUID          | Identificador único da conversa.                                         |
+| **dataMensagem**   | DateTime      | Data e hora da mensagem.                                                 |
+| **ResumoConversa** | String  | Resumo da conversa realizada.                                            |
+| **conversaConcluida** | Boolean       | Indica se a conversa foi concluída.                                      |
+| **EmailCliente**   | String  | Email do cliente associado à conversa.                                   |
+| **Categoria**      | Enum          | Categoria da conversa (valores permitidos: 0 a 10).                      |
+| **Satisfacao**     | String  | Nível de satisfação do cliente (valores permitidos: 1 a 5).              |
+
+---
+
+### Cliente
+
+| Coluna              | Tipo          | Descrição                                                                 |
+|---------------------|---------------|---------------------------------------------------------------------------|
+| **Id**             | Int           | Identificador único do cliente.                                          |
+| **nome**           | String  | Nome completo do cliente.                                                |
+| **email**          | String  | Endereço de email do cliente (validação de formato de email).            |
+| **cpf**            | String  | CPF do cliente (Cadastro de Pessoa Física).                              |
+| **telefone**       | String  | Telefone de contato do cliente.                                          |
+| **sexo**           | String  | Sexo do cliente (valores permitidos: M ou F).                            |
+| **cep**            | String  | CEP do cliente (Código de Endereçamento Postal).                         |
+| **datacriacao**    | DateTime      | Data de criação do registro do cliente.                                  |
+
 ## 📡 API Endpoints
 
 ### Autenticação
