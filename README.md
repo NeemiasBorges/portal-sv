@@ -73,6 +73,7 @@ Apresento um portal de seguros de viagem, composta por um backend .NET Core 8.0 
 - **Qualidade de Código**: SonarQube
 - **Testes**: xUnit
 - **IA**: API Hugging Face
+- **Autenticacao**: JWT
 
 ### Frontend
 - **Framework**: React 18.3.1
